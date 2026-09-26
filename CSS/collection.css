@@ -140,15 +140,14 @@ body {
     display: grid;
 
     grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+        repeat(2, minmax(0, 1fr));
 
-    column-gap: 35px;
+    column-gap: 50px;
 
-    row-gap: 65px;
+    row-gap: 80px;
 
     align-items: start;
 }
-
 
 /* PRODUCT CARD */
 
@@ -172,7 +171,7 @@ body {
 
 .product-card img {
     width: 100%;
-    max-width: 230px;
+    max-width: 500px;
 
     height: auto;
 

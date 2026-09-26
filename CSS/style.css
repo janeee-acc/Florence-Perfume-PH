@@ -215,9 +215,11 @@ input {
 .best-seller-item img {
     width: 100%;
 
-    aspect-ratio: 1 / 0.78;
+    height: auto;
 
-    object-fit: cover;
+    display: block;
+
+    object-fit: contain;
 }
 
 
