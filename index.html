@@ -28,6 +28,16 @@
 
 <body>
 
+    <div class="price-popup">
+    <button class="close-popup" onclick="this.parentElement.style.display='none'">×</button>
+
+    <h2>FLORENCE PERFUMES</h2>
+    <h3>AVAILABLE SIZES</h3>
+
+    <p>10 ML — ₱149</p>
+    <p>50 ML — ₱389</p>
+    <p>100 ML — ₱729</p>
+</div>
 
     <!-- =====================================================
          NAVIGATION BAR
@@ -338,11 +348,10 @@
                                     WOMEN'S PERFUME
                                 </h4>
 
-
                                 <p>
-                                    A collection of fragrances for women,
-                                    with different scents to complement
-                                    individual preferences and styles.
+                                    Explore feminine fragrance profiles
+                                    ranging from floral and sweet scents
+                                    to elegant and sophisticated compositions.
                                 </p>
 
                             </article>
@@ -363,11 +372,10 @@
                                     MEN'S PERFUME
                                 </h4>
 
-
                                 <p>
-                                    Distinctive fragrances for men,
-                                    with a variety of scents to suit
-                                    different occasions.
+                                    Discover fresh, woody, aromatic, and 
+                                    deeper fragrance styles suited for
+                                    everyday wear and special occasions.
                                 </p>
 
                             </article>
@@ -390,9 +398,9 @@
 
 
                                 <p>
-                                    Versatile fragrances designed for
-                                    anyone who enjoys unique and refined
-                                    scents.
+                                    Explore versatile fragrances designed
+                                    to be enjoyed by anyone and matched
+                                    with different personal styles.
                                 </p>
 
                             </article>
@@ -411,110 +419,88 @@
 
 
 
-        <!-- =================================================
-             MORE THAN A FRAGRANCE
-        ================================================== -->
+<!-- =================================================
+     MORE THAN A FRAGRANCE
+================================================== -->
 
-        <section class="more-than-fragrance section">
+<section class="more-than-fragrance section">
+
+    <div class="features-container">
+
+        <!-- LEFT COLUMN -->
+
+        <div class="features-left">
+
+            <!-- FEATURE 1 -->
+
+            <article class="feature">
+
+                <div class="feature-image">
+                    <img
+                        src="images/features/high-oil-concentration.png"
+                        alt="High Oil Concentration"
+                    >
+                </div>
+
+                <h3>LONG-LASTING FORMULA</h3>
+
+                <p>
+                    Florence Perfumes offers long-lasting oil-based
+                    fragrances for women and men, with a variety of
+                    scents to choose from.
+                </p>
+
+            </article>
 
 
-            <!-- TITLE -->
+            <!-- FEATURE 2 -->
 
-            <div class="section-title">
+            <article class="feature">
 
-                <h2>
-                    More than a Fragrance
-                </h2>
+                <div class="feature-image">
+                    <img
+                        src="images/features/long-lasting-fragrance.png"
+                        alt="Inspired Fragrances"
+                    >
+                </div>
 
+                <h3>INSPIRED FRAGRANCES</h3>
+
+                <p>
+                    Florence Perfumes offers inspired fragrances
+                    with a variety of scent profiles available
+                    for women, men, and unisex preferences.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <!-- RIGHT COLUMN -->
+
+        <article class="feature feature-large">
+
+            <div class="feature-image">
+                <img
+                    src="images/features/premium-glass-bottles.png"
+                    alt="Available Sizes"
+                >
             </div>
 
+            <h3>AVAILABLE SIZES</h3>
 
+            <p>
+                Florence Perfumes are presented in premium
+                glass bottles and are available in different
+                sizes, including 10ml, 50ml, and 100ml.
+            </p>
 
-            <!-- THREE FEATURES -->
+        </article>
 
-            <div class="features-container">
+    </div>
 
-
-                <!-- FEATURE 1 -->
-
-                <article class="feature">
-
-
-                    <div class="feature-image">
-
-                        <img
-                            src="images/features/high-oil-concentration.png"
-                            alt="30% High Oil Concentration"
-                        >
-
-                    </div>
-
-
-                    <p>
-                        Florence Perfumes offers fragrances with
-                        30% high oil concentration, formulated for
-                        a long-lasting scent.
-                    </p>
-
-
-                </article>
-
-
-
-                <!-- FEATURE 2 -->
-
-                <article class="feature">
-
-
-                    <div class="feature-image">
-
-                        <img
-                            src="images/features/long-lasting-fragrance.png"
-                            alt="Long-Lasting Fragrance"
-                        >
-
-                    </div>
-
-
-                    <p>
-                        Florence Perfumes offers long-lasting oil
-                        based fragrances for women and men, with
-                        a variety of scents to choose from.
-                    </p>
-
-
-                </article>
-
-
-
-                <!-- FEATURE 3 -->
-
-                <article class="feature">
-
-
-                    <div class="feature-image">
-
-                        <img
-                            src="images/features/premium-glass-bottles.png"
-                            alt="Premium Glass Bottles"
-                        >
-
-                    </div>
-
-
-                    <p>
-                        Florence Perfumes are presented in premium
-                        glass bottles and are available in different
-                        sizes, including 10ml, 50ml, and 100ml.
-                    </p>
-
-
-                </article>
-
-
-            </div>
-
-        </section>
+</section>
 
 
     </main>
@@ -541,7 +527,7 @@
                 <!-- Facebook -->
 
                 <a
-                    href="#"
+                    href="https://www.facebook.com/share/1DfZagzYTm/?mibextid=wwXIfr"
                     aria-label="Facebook"
                     class="social-icon"
                 >
@@ -565,7 +551,7 @@
                 <!-- Instagram -->
 
                 <a
-                    href="#"
+                    href="https://www.instagram.com/florenceperfumes.ph?stkn=b3QwMWhmd2N6M2Qy"
                     aria-label="Instagram"
                     class="social-icon"
                 >
@@ -613,6 +599,7 @@
 
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 
 </html>

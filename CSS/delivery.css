@@ -13,7 +13,7 @@
 
     width: 100%;
 
-    height: 460px;
+    height: 550px;
 
     overflow: hidden;
 
@@ -484,37 +484,39 @@
 }
 
 
-
-/* =========================================================
-   TABLET
-========================================================= */
-
 @media (max-width: 900px) {
 
     .delivery-hero {
         height: 350px;
     }
 
+    .delivery-hero-content {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .delivery-hero-content h1 {
+        max-width: 60%;
+        font-size: clamp(36px, 5vw, 48px);
+        line-height: 1.1;
+    }
+
 
     .shopping-platforms {
         width: 90%;
-
         column-gap: 20px;
     }
 
 
     .shopping-platform {
         width: 170px;
-
         height: 110px;
     }
 
 
     .delivery-footer-container {
         padding-left: 5%;
-
         padding-right: 5%;
-
         column-gap: 30px;
     }
 
@@ -527,7 +529,6 @@
 
     .footer-contact-details {
         font-size: 12px;
-
         letter-spacing: 1.5px;
     }
 
@@ -542,17 +543,29 @@
 @media (max-width: 600px) {
 
 
-    /* HERO */
+/* HERO */
 
-    .delivery-hero {
-        height: 300px;
-    }
+.delivery-hero {
+    height: auto;
+}
 
+.delivery-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
 
-    .delivery-hero-content h1 {
-        font-size: 42px;
-    }
+.delivery-hero-content {
+    padding-left: 20%;
+    padding-right: 7%;
+}
 
+.delivery-hero-content h1 {
+    max-width: 70%;
+    font-size: 20px;
+    line-height: 1.1;
+}
 
 
     /* CHECKOUT */
@@ -568,14 +581,14 @@
 
 
     .delivery-section-title h2 {
-        font-size: 30px;
+        font-size: 20px;
 
         letter-spacing: 2px;
     }
 
 
     .delivery-section-title p {
-        font-size: 12px;
+        font-size: 10px;
 
         letter-spacing: 1px;
 
@@ -613,7 +626,7 @@
 
 
     .back-to-collection span {
-        font-size: 27px;
+        font-size: 20px;
     }
 
 
