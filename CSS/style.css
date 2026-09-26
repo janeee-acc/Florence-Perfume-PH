@@ -159,7 +159,7 @@ input {
 ========================================================= */
 
 .best-seller {
-    padding-top: 60px;
+    padding-top: 100px;
     padding-bottom: 60px;
 }
 
@@ -169,7 +169,7 @@ input {
 
     width: 100%;
 
-    margin-top: 80px;
+    margin-top: 45px;
 }
 
 
@@ -304,6 +304,8 @@ input {
 .collection-introduction p {
     max-width: 410px;
 
+    font-family: "Crimson Pro", Georgia, serif;
+
     font-size: 14px;
 
     line-height: 1.7;
@@ -407,7 +409,7 @@ input {
 /* KEEP ORIGINAL TEXT */
 
 .collection-card h4 {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Crimson Pro", Georgia, serif;
 
     font-size: 17px;
 
@@ -421,6 +423,8 @@ input {
 
 .collection-card p {
     max-width: 350px;
+
+    font-family: "Crimson Pro", Georgia, serif;
 
     font-size: 11px;
 
@@ -484,6 +488,8 @@ input {
     max-width: 340px;
 
     margin: 0 auto;
+
+    font-family: "Crimson Pro", Georgia, serif;
 
     font-size: 14px;
 
