@@ -1,0 +1,349 @@
+/* =========================================================
+   FLORENCE PERFUME PH
+   COLLECTION PAGE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    color: #111111;
+    background-color: #FFFFFF;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================================
+   COLLECTION PAGE
+========================================================= */
+
+.collection-page {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns: 230px 1fr;
+
+    column-gap: 55px;
+
+    padding: 80px 65px 110px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.collection-sidebar {
+    width: 100%;
+}
+
+
+.collection-sidebar h1 {
+    margin: 0 0 30px;
+
+    padding-left: 35px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* CATEGORY LIST */
+
+.category-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+}
+
+
+.category {
+    width: 100%;
+    height: 48px;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: #111111;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* ACTIVE CATEGORY */
+
+.category.active {
+    background-color: #1F1F1F;
+
+    color: #FFFFFF;
+}
+
+
+/* CATEGORY HOVER */
+
+.category:not(.active):hover {
+    background-color: #F3F3F3;
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.products-section {
+    width: 100%;
+
+    padding: 0 10px;
+}
+
+
+.products-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    column-gap: 35px;
+
+    row-gap: 65px;
+
+    align-items: start;
+}
+
+
+/* PRODUCT CARD */
+
+.product-card {
+    width: 100%;
+
+    text-align: center;
+}
+
+
+/* CLICKABLE IMAGE */
+
+.product-image-link {
+    display: block;
+
+    text-decoration: none;
+}
+
+
+/* PRODUCT IMAGE */
+
+.product-card img {
+    width: 100%;
+    max-width: 230px;
+
+    height: auto;
+
+    margin: 0 auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* IMAGE HOVER */
+
+.product-image-link:hover img {
+    transform: scale(1.03);
+}
+
+
+/* PRODUCT NAME */
+
+.product-card h2 {
+    margin-top: 18px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color: #111111;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .collection-page {
+        grid-template-columns: 200px 1fr;
+
+        column-gap: 40px;
+
+        padding: 70px 45px 90px;
+    }
+
+
+    .products-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        column-gap: 30px;
+
+        row-gap: 55px;
+    }
+
+
+    .product-card img {
+        max-width: 220px;
+    }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* COLLECTION */
+
+    .collection-page {
+        grid-template-columns: 175px 1fr;
+
+        column-gap: 30px;
+
+        padding: 60px 30px 80px;
+    }
+
+
+    .collection-sidebar h1 {
+        font-size: 22px;
+    }
+
+
+    .category {
+        height: 44px;
+
+        font-size: 17px;
+    }
+
+
+    /* PRODUCTS */
+
+    .products-grid {
+        column-gap: 25px;
+
+        row-gap: 50px;
+    }
+
+
+    .product-card h2 {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* COLLECTION */
+
+    .collection-page {
+        display: block;
+
+        padding: 45px 20px 70px;
+    }
+
+
+    .collection-sidebar {
+        margin-bottom: 45px;
+    }
+
+
+    .collection-sidebar h1 {
+        font-size: 22px;
+
+        margin-bottom: 22px;
+
+        padding-left: 10px;
+    }
+
+
+    .category {
+        height: 44px;
+
+        font-size: 16px;
+    }
+
+
+    /* PRODUCTS */
+
+    .products-section {
+        padding: 0;
+    }
+
+
+    .products-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        column-gap: 22px;
+
+        row-gap: 45px;
+    }
+
+
+    .product-card img {
+        max-width: 100%;
+    }
+
+
+    .product-card h2 {
+        font-size: 16px;
+
+        margin-top: 13px;
+    }
+}
