@@ -119,82 +119,7 @@ input {
 
     margin-bottom: 38px;
 }
-/* =========================================================
-   SEARCH BAR
-========================================================= */
 
-.search-box {
-    width: 390px;
-    height: 50px;
-
-    display: flex;
-    align-items: center;
-
-    background-color: #FFFFFF;
-
-    border: 1px solid #999999;
-    border-radius: 30px;
-
-    overflow: hidden;
-
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.search-box input {
-    flex: 1;
-
-    min-width: 0;
-    height: 100%;
-
-    padding: 0 10px 0 18px;
-
-    border: none;
-    outline: none;
-
-    background-color: #FFFFFF;
-
-    font-size: 13px;
-    font-weight: 400;
-
-    letter-spacing: 0.3px;
-
-    color: #222222;
-}
-
-
-.search-box input::placeholder {
-    color: #777777;
-    opacity: 1;
-}
-
-
-.search-button {
-    width: 42px;
-    height: 100%;
-
-    margin-right: 3px;
-
-    border: none;
-    border-radius: 0;
-
-    background-color: transparent;
-
-    color: #111111;
-
-    font-size: 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer;
-}
-
-.search-button:focus,
-.search-button:active {
-    outline: none;
-    box-shadow: none;
-}
 /* =========================================================
    GENERAL SECTIONS
 ========================================================= */
@@ -574,113 +499,712 @@ input {
 
 @media (max-width: 900px) {
 
-
-    /* HERO */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero {
-        height: 380px;
+        width: 100%;
+        height: auto;
+        min-height: 380px;
+
+        aspect-ratio: 16 / 7;
+
+        overflow: hidden;
     }
 
+    .hero-image {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center center;
+    }
 
     .hero-content {
+        width: 100%;
+        height: 100%;
+
         padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .hero h1 {
+        left: 0;
+
+        max-width: 90%;
+
+        font-size: clamp(38px, 6vw, 52px);
+
+        line-height: 1.1;
+
+        margin-bottom: 30px;
+    }
+
+    /* =====================================================
+       SECTION TITLES
+    ===================================================== */
+
+    .section-title h2 {
+        font-size: clamp(34px, 5vw, 44px);
+
+        letter-spacing: 5px;
     }
 
 
-    /* BEST SELLER */
+    /* =====================================================
+       BEST SELLER
+    ===================================================== */
+
+    .best-seller {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .best-seller-carousel {
+        position: relative;
+
+        width: 100%;
+
+        margin-top: 55px;
+
+        overflow: hidden;
+    }
+
+    .best-seller-viewport {
+        width: 100%;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
+
+        scroll-behavior: smooth;
+    }
+
+    .best-seller-viewport::-webkit-scrollbar {
+        display: none;
+    }
+
+    .best-seller-track {
+        display: flex;
+
+        width: max-content;
+
+        transition: none;
+    }
 
     .best-seller-item {
         flex: 0 0 50%;
+
+        width: 50vw;
+
+        padding: 0 8px;
+    }
+
+    .best-seller-item img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 1 / 0.78;
+
+        object-fit: cover;
+    }
+
+    .carousel-dots {
+        margin-top: 40px;
     }
 
 
-    /* COLLECTION */
+    /* =====================================================
+       COLLECTION
+    ===================================================== */
+
+    .collection {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 
     .collection-layout {
+        width: 100%;
+
         grid-template-columns: 1fr;
     }
 
 
     .collection-introduction {
-        padding: 35px 7%;
+        padding: 35px 7% 50px;
 
         text-align: center;
     }
 
+    .collection-introduction h3 {
+        font-size: clamp(32px, 5vw, 42px);
+    }
 
     .collection-introduction p {
+        max-width: 600px;
+
         margin-left: auto;
         margin-right: auto;
     }
 
 
     .discover-button {
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
+
+    /* =====================================================
+       COLLECTION CAROUSEL
+    ===================================================== */
+
+    .collection-carousel {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    .collection-viewport {
+        width: 100%;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .collection-viewport::-webkit-scrollbar {
+        display: none;
+    }
+
+    .collection-track {
+        display: flex;
+    }
 
     .collection-card {
         flex: 0 0 65%;
+
+        margin-right: 25px;
+    }
+
+    .collection-card img {
+        width: 100%;
+        height: auto;
+
+        object-fit: cover;
+    }
+
+    .collection-card p {
+        max-width: 100%;
     }
 
 
-    /* FEATURES */
+    /* =====================================================
+       MORE THAN A FRAGRANCE
+    ===================================================== */
+
+    .more-than-fragrance {
+        padding: 60px 7% 100px;
+    }
 
     .features-container {
+        width: 100%;
+
         grid-template-columns: 1fr;
 
         gap: 60px;
     }
 
+    .feature-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .feature p {
+        max-width: 500px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* =========================================================
+   TABLET - BEST SELLER + COLLECTION
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* =====================================================
+       BEST SELLER CAROUSEL
+    ===================================================== */
+
+    .best-seller {
+        width: 100%;
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .best-seller-carousel {
+        position: relative;
+        width: 100%;
+
+        margin-top: 55px;
+
+        overflow: hidden;
+    }
+
+    .best-seller-viewport {
+        width: 100%;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+
+        scroll-behavior: smooth;
+    }
+
+    .best-seller-viewport::-webkit-scrollbar {
+        display: none;
+    }
+
+    .best-seller-track {
+        display: flex;
+
+        width: max-content;
+    }
+
+    .best-seller-item {
+        flex: 0 0 50%;
+        width: 50vw;
+
+        padding: 0 8px;
+    }
+
+    .best-seller-item img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 1 / 0.78;
+
+        object-fit: cover;
+    }
+
+    .carousel-dots {
+        margin-top: 40px;
+    }
+
+
+    /* =====================================================
+       COLLECTION SECTION
+    ===================================================== */
+
+    .collection {
+        width: 100%;
+
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .collection-layout {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        margin-top: 30px;
+    }
+
+
+    /* COLLECTION INTRODUCTION */
+
+    .collection-introduction {
+        width: 100%;
+
+        padding: 35px 7% 50px;
+
+        text-align: center;
+    }
+
+    .collection-introduction h3 {
+        font-size: clamp(32px, 5vw, 42px);
+
+        line-height: 1.1;
+    }
+
+    .collection-introduction p {
+        width: 100%;
+        max-width: 600px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .discover-button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* COLLECTION CAROUSEL */
+
+    .collection-carousel {
+        position: relative;
+
+        width: 100%;
+        min-width: 0;
+
+        overflow: hidden;
+    }
+
+    .collection-viewport {
+        width: 100%;
+        min-width: 0;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+
+        scroll-behavior: smooth;
+    }
+
+    .collection-viewport::-webkit-scrollbar {
+        display: none;
+    }
+
+    .collection-track {
+        display: flex;
+
+        width: max-content;
+    }
+
+    .collection-card {
+        flex: 0 0 65%;
+        width: 65%;
+
+        min-width: 0;
+
+        margin-right: 25px;
+    }
+
+    .collection-card img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 1.22 / 1;
+
+        object-fit: cover;
+    }
+
+    .collection-card h4 {
+        font-size: 17px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 20px;
+    }
+
+    .collection-card p {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
 }
 
 
 /* =========================================================
-   MOBILE
+   MOBILE - BEST SELLER + COLLECTION
 ========================================================= */
 
 @media (max-width: 600px) {
 
-    /* HERO */
+    /* =====================================================
+       BEST SELLER CAROUSEL
+    ===================================================== */
 
-    .hero {
-        height: 330px;
+    .best-seller {
+        width: 100%;
+
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .best-seller-carousel {
+        width: 100%;
+
+        margin-top: 40px;
+
+        overflow: hidden;
+    }
+
+    .best-seller-viewport {
+        width: 100%;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+
+        scroll-behavior: smooth;
+    }
+
+    .best-seller-viewport::-webkit-scrollbar {
+        display: none;
+    }
+
+    .best-seller-track {
+        display: flex;
+
+        width: max-content;
+    }
+
+    .best-seller-item {
+        flex: 0 0 85vw;
+        width: 85vw;
+
+        padding: 0 6px;
+    }
+
+    .best-seller-item img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 1 / 0.78;
+
+        object-fit: cover;
+    }
+
+    .carousel-dots {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 6px;
+
+        margin-top: 30px;
+    }
+
+    .dot {
+        width: 11px;
+        height: 4px;
     }
 
 
-    .hero-content {
-        padding-left: 7%;
+    /* =====================================================
+       COLLECTION SECTION
+    ===================================================== */
+
+    .collection {
+        width: 100%;
+
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .collection-layout {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
 
-    .hero h1 {
-        font-size: 35px;
+    /* COLLECTION INTRODUCTION */
+
+    .collection-introduction {
+        width: 100%;
+
+        padding: 0 20px 45px;
+
+        text-align: center;
+    }
+
+    .collection-introduction h3 {
+        font-size: 34px;
+
+        letter-spacing: 4px;
+
+        line-height: 1.1;
+
+        margin-bottom: 25px;
+    }
+
+    .collection-introduction p {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+        letter-spacing: 1.5px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-bottom: 35px;
+    }
+
+    .discover-button {
+        width: 160px;
+        height: 46px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 19px;
     }
 
 
-    .search-box {
-        width: 280px;
+    /* COLLECTION CAROUSEL */
+
+    .collection-carousel {
+        position: relative;
+
+        width: 100%;
+        min-width: 0;
+
+        overflow: hidden;
     }
 
+    .collection-viewport {
+        width: 100%;
+        min-width: 0;
 
-    /* BEST SELLER */
+        overflow-x: auto;
+        overflow-y: hidden;
 
-.best-seller-item {
-    flex: 0 0 85%;
-    width: 85vw;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+
+        scroll-behavior: smooth;
+    }
+
+    .collection-viewport::-webkit-scrollbar {
+        display: none;
+    }
+
+    .collection-track {
+        display: flex;
+
+        width: max-content;
+    }
+
+    .collection-card {
+        flex: 0 0 88vw;
+        width: 88vw;
+
+        min-width: 0;
+
+        margin-right: 18px;
+    }
+
+    .collection-card img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 1.22 / 1;
+
+        object-fit: cover;
+
+        margin-bottom: 18px;
+    }
+
+    .collection-card h4 {
+        font-size: 16px;
+
+        letter-spacing: 2px;
+
+        line-height: 1.2;
+
+        margin-bottom: 16px;
+    }
+
+    .collection-card p {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 11px;
+
+        line-height: 1.6;
+
+        letter-spacing: 1.2px;
+    }
 }
 
 
-    /* COLLECTION */
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
 
-    .collection-introduction h3 {
-        font-size: 36px;
+@media (max-width: 380px) {
 
-        margin-bottom: 30px;
+    /* =====================================================
+       BEST SELLER
+    ===================================================== */
+
+    .best-seller-item {
+        flex: 0 0 90vw;
+        width: 90vw;
+
+        padding: 0 5px;
     }
 
 
+    /* =====================================================
+       COLLECTION
+    ===================================================== */
+
+    .collection {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .collection-introduction {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .collection-introduction h3 {
+        font-size: 30px;
+    }
+
     .collection-card {
-        flex: 0 0 90%;
+        flex: 0 0 90vw;
+        width: 90vw;
+
+        margin-right: 15px;
+    }
+
+    .collection-card h4 {
+        font-size: 15px;
+    }
+
+    .collection-card p {
+        font-size: 10.5px;
     }
 }

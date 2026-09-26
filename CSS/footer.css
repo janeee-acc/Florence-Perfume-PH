@@ -4,72 +4,58 @@
 ========================================================= */
 
 .footer {
-    width: 100%;
-
-    min-height: 125px;
-
-    background-color: #EDEDED;
-
-    display: flex;
-    align-items: center;
+    width:100%;
+    min-height:125px;
+    background:#EDEDED;
+    display:flex;
+    align-items:center;
 }
 
 
 .footer-container {
-    width: 100%;
-
-    padding: 0 4.5%;
-
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
+    width:100%;
+    padding:0 4.5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 
 .footer p {
-    font-size: 12px;
-    font-weight: 300;
-    color: #555555;
+    font-size:12px;
+    font-weight:300;
+    color:#555;
 }
 
 
 .social-icons {
-    display: flex;
-
-    align-items: center;
-
-    gap: 22px;
+    display:flex;
+    align-items:center;
+    gap:22px;
 }
 
 
 .social-icon {
-    width: 24px;
-    height: 24px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    color: #111111;
-
-    text-decoration: none;
-
-    transition: opacity 0.2s ease;
+    width:24px;
+    height:24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#111;
+    text-decoration:none;
+    transition:opacity .2s ease;
 }
 
 
 .social-icon svg {
-    width: 20px;
-    height: 20px;
-
-    display: block;
+    width:20px;
+    height:20px;
+    display:block;
 }
 
 
 .social-icon:hover {
-    opacity: 0.6;
+    opacity:.6;
 }
 
 
@@ -77,17 +63,14 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 900px) {
-
-    .footer {
-        min-height: 100px;
+@media(max-width:900px){
+    .footer{
+        min-height:100px;
     }
 
-    .footer-container {
-        padding: 20px 5%;
-
-        flex-direction: column;
-
-        gap: 20px;
+    .footer-container{
+        padding:20px 5%;
+        flex-direction:column;
+        gap:20px;
     }
 }
