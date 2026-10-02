@@ -121,10 +121,10 @@ if (
                 .width;
 
 
-        /*
-            Find the current product position
-            inside the original 10 products.
-        */
+/*
+    Find the current product position
+    inside the original 6 products.
+*/
 
         const scrollInsideSet =
             bestSellerViewport.scrollLeft -
@@ -137,9 +137,9 @@ if (
             );
 
 
-        /*
-            Keep the index between 0 and 9.
-        */
+/*
+    Keep the index between 0 and 5.
+*/
 
         currentItem =
             (
@@ -149,11 +149,10 @@ if (
             ) %
             bestSellerItems.length;
 
-
-        /*
-            10 products = 5 indicators.
-            Each indicator represents 2 products.
-        */
+/*
+    6 products = 3 indicators.
+    Each indicator represents 2 products.
+*/
 
         const activeDot =
             Math.floor(currentItem / 2);

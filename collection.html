@@ -8,15 +8,19 @@
 
     <title>Florence | Collections</title>
 
+    <!-- Shared Styles -->
     <link rel="stylesheet" href="CSS/navigation.css">
     <link rel="stylesheet" href="CSS/footer.css">
+
+    <!-- Collection Page -->
     <link rel="stylesheet" href="CSS/collection.css">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400;500&display=swap"
         rel="stylesheet">
 
 </head>
@@ -26,12 +30,41 @@
 
 
     <!-- =====================================================
-         NAVIGATION BAR
+         NAVIGATION
     ====================================================== -->
 
     <header class="navbar">
 
-        <div class="nav-container">
+        <div class="nav-top">
+
+
+            <!-- SEARCH -->
+
+            <button
+                class="nav-search"
+                type="button"
+                aria-label="Search">
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle
+                        cx="11"
+                        cy="11"
+                        r="6.5">
+                    </circle>
+
+                    <line
+                        x1="16"
+                        y1="16"
+                        x2="21"
+                        y2="21">
+                    </line>
+
+                </svg>
+
+            </button>
+
+
 
             <!-- LOGO -->
 
@@ -40,32 +73,125 @@
             </a>
 
 
-            <!-- NAVIGATION -->
 
-            <nav class="nav-menu">
+            <!-- SOCIAL MEDIA -->
 
-                <a href="index.html" class="nav-link">
-                    Home
+            <div class="nav-socials">
+
+                <a
+                    href="https://www.facebook.com/share/1DfZagzYTm/?mibextid=wwXIfr"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.5l.5-4H13V9c0-.7.3-1 1-1z"
+                        ></path>
+                    </svg>
                 </a>
 
-                <a href="collection.html" class="nav-link active">
-                    Collections
+
+                <a
+                    href="https://www.instagram.com/florenceperfumes.ph?stkn=b3QwMWhmd2N6M2Qy"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <rect
+                            x="3"
+                            y="3"
+                            width="18"
+                            height="18"
+                            rx="5"
+                            ry="5"
+                        ></rect>
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                        ></circle>
+
+                        <circle
+                            cx="17.5"
+                            cy="6.5"
+                            r="1"
+                        ></circle>
+                    </svg>
                 </a>
 
-                <a href="delivery.html" class="nav-link">
-                    Shop
-                </a>
-
-            </nav>
+            </div>
 
         </div>
+
+
+
+        <!-- MENU -->
+
+        <nav class="nav-menu">
+
+            <a
+                href="index.html"
+                class="nav-link">
+
+                Home
+
+            </a>
+
+
+            <a
+                href="collection.html"
+                class="nav-link active">
+
+                Collection
+
+            </a>
+
+
+            <a
+                href="delivery.html"
+                class="nav-link">
+
+                Stores
+
+            </a>
+
+        </nav>
 
     </header>
 
 
 
     <!-- =====================================================
-         COLLECTION PAGE
+         COLLECTION INTRODUCTION
+         SEPARATE FROM SIDEBAR AND PRODUCTS
+    ====================================================== -->
+
+    <section class="collection-intro">
+
+        <p class="intro-eyebrow">
+            FIND YOUR SIGNATURE
+        </p>
+
+        <h1>
+            Explore the Collection
+        </h1>
+
+        <p class="intro-description">
+            Discover fragrances thoughtfully made for every mood,
+            moment, and you.
+        </p>
+
+        <div class="intro-line"></div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         COLLECTION PRODUCTS AREA
     ====================================================== -->
 
     <main class="collection-page">
@@ -77,30 +203,55 @@
 
         <aside class="collection-sidebar">
 
-            <h1>COLLECTIONS</h1>
+
+            <div class="collection-sidebar-title">
+
+                <p class="collection-eyebrow">
+                    FLORENCE PERFUME PH
+                </p>
+
+                <h2>
+                    Collections
+                </h2>
+
+                <div class="collection-line"></div>
+
+            </div>
+
+
 
             <div class="category-list">
+
 
                 <button
                     class="category active"
                     data-category="unisex"
                     type="button">
+
                     Unisex
+
                 </button>
+
 
                 <button
                     class="category"
                     data-category="women"
                     type="button">
+
                     Women
+
                 </button>
+
 
                 <button
                     class="category"
                     data-category="men"
                     type="button">
+
                     Men
+
                 </button>
+
 
             </div>
 
@@ -108,156 +259,228 @@
 
 
 
-<!-- =================================================
-     PRODUCTS
-================================================== -->
+        <!-- =================================================
+             PRODUCTS
+        ================================================== -->
 
-<section class="products-section">
-
-    <div class="products-grid" id="productsGrid">
+        <section class="products-section">
 
 
-        <!-- =========================
-             UNISEX
-        ========================== -->
-
-        <div class="product-card" data-category="unisex">
-            <img
-                src="images/collection/WoodSages.png"
-                alt="Wood Sages"
-            >
-        </div>
-
-        <div class="product-card" data-category="unisex">
-            <img
-                src="images/collection/UnJardinT.png"
-                alt="UnJardin T"
-            >
-        </div>
-
-        <div class="product-card" data-category="unisex">
-            <img
-                src="images/collection/SantalWoody.png"
-                alt="Santal Woody"
-            >
-        </div>
-
-        <div class="product-card" data-category="unisex">
-            <img
-                src="images/collection/LePapier.png"
-                alt="Le'Papier"
-            >
-        </div>
-
-        <div class="product-card" data-category="unisex">
-            <img
-                src="images/collection/BalanceClean.png"
-                alt="Balance Clean"
-            >
-        </div>
+            <div
+                class="products-grid"
+                id="productsGrid">
 
 
-        <!-- =========================
-             WOMEN
-        ========================== -->
-
-        <div class="product-card" data-category="women">
-            <img
-                src="images/collection/Delinna.png"
-                alt="Delinna"
-            >
-        </div>
-
-        <div class="product-card" data-category="women">
-            <img
-                src="images/collection/ACloud.png"
-                alt="A Cloud"
-            >
-        </div>
-
-        <div class="product-card" data-category="women">
-            <img
-                src="images/collection/ChloeFlorence.png"
-                alt="Chloe Florence"
-            >
-        </div>
+                <!-- =========================
+                     UNISEX
+                ========================== -->
 
 
-        <div class="product-card" data-category="women">
-            <img
-                src="images/collection/SakuraBlossom.png"
-                alt="Sakura Blossom"
-            >
-        </div>
+                <div
+                    class="product-card"
+                    data-category="unisex">
 
-        <div class="product-card" data-category="women">
-            <img
-                src="images/collection/AmethystFlorence.png"
-                alt="Amethyst Florence"
-            >
-        </div>
+                    <img
+                        src="images/collection/WoodSages.png"
+                        alt="Wood Sages">
 
-        <div class="product-card" data-category="women">
-            <img
-                src="images/collection/VeryGoodGirlDay.png"
-                alt="Very Good Girl Day"
-            >
-        </div>
+                </div>
 
 
-        <!-- =========================
-             MEN
-        ========================== -->
+                <div
+                    class="product-card"
+                    data-category="unisex">
+
+                    <img
+                        src="images/collection/UnJardinT.png"
+                        alt="Un Jardin T">
+
+                </div>
 
 
-        <div class="product-card" data-category="men">
-            <img
-                src="images/collection/CAvntus.png"
-                alt="C-Avntus"
-            >
-        </div>
+                <div
+                    class="product-card"
+                    data-category="unisex">
 
-        <div class="product-card" data-category="men">
-            <img
-                src="images/collection/SavMen.png"
-                alt="SavMen"
-            >
-        </div>
+                    <img
+                        src="images/collection/SantalWoody.png"
+                        alt="Santal Woody">
 
-        <div class="product-card" data-category="men">
-            <img
-                src="images/collection/BlueMen.png"
-                alt="Blue Men"
-            >
-        </div>
-
-        <div class="product-card" data-category="men">
-            <img
-                src="images/collection/ErozMen.png"
-                alt="Eroz Men"
-            >
-        </div>
-
-        <div class="product-card" data-category="men">
-            <img
-                src="images/collection/CKmen.png"
-                alt="CK Men"
-            >
-        </div>
-
-        <div class="product-card" data-category="men">
-            <img
-                src="images/collection/StrongWithYou.png"
-                alt="Strong With You"
-            >
-        </div>
+                </div>
 
 
-    </div>
+                <div
+                    class="product-card"
+                    data-category="unisex">
 
-</section>
+                    <img
+                        src="images/collection/LePapier.png"
+                        alt="Le Papier">
 
-</main>
+                </div>
+
+
+                <div
+                    class="product-card"
+                    data-category="unisex">
+
+                    <img
+                        src="images/collection/BalanceClean.png"
+                        alt="Balance Clean">
+
+                </div>
+
+
+
+                <!-- =========================
+                     WOMEN
+                ========================== -->
+
+
+                <div
+                    class="product-card"
+                    data-category="women">
+
+                    <img
+                        src="images/collection/Delinna.png"
+                        alt="Delinna">
+
+                </div>
+
+
+                <div
+                    class="product-card"
+                    data-category="women">
+
+                    <img
+                        src="images/collection/ACloud.png"
+                        alt="A Cloud">
+
+                </div>
+
+
+                <div
+                    class="product-card"
+                    data-category="women">
+
+                    <img
+                        src="images/collection/ChloeFlorence.png"
+                        alt="Chloe Florence">
+
+                </div>
+
+
+                <div
+                    class="product-card"
+                    data-category="women">
+
+                    <img
+                        src="images/collection/SakuraBlossom.png"
+                        alt="Sakura Blossom">
+
+                </div>
+
+
+                <div
+                    class="product-card"
+                    data-category="women">
+
+                    <img
+                        src="images/collection/AmethystFlorence.png"
+                        alt="Amethyst Florence">
+
+                </div>
+
+
+                <div
+                    class="product-card"
+                    data-category="women">
+
+                    <img
+                        src="images/collection/VeryGoodGirlDay.png"
+                        alt="Very Good Girl Day">
+
+                </div>
+
+
+
+                <!-- =========================
+                     MEN
+                ========================== -->
+
+
+                <div
+                    class="product-card"
+                    data-category="men">
+
+                    <img
+                        src="images/collection/CAvntus.png"
+                        alt="C-Avntus">
+
+                </div>
+
+
+                <div
+                    class="product-card"
+                    data-category="men">
+
+                    <img
+                        src="images/collection/SavMen.png"
+                        alt="SavMen">
+
+                </div>
+
+
+                <div
+                    class="product-card"
+                    data-category="men">
+
+                    <img
+                        src="images/collection/BlueMen.png"
+                        alt="Blue Men">
+
+                </div>
+
+
+                <div
+                    class="product-card"
+                    data-category="men">
+
+                    <img
+                        src="images/collection/ErozMen.png"
+                        alt="Eroz Men">
+
+                </div>
+
+
+                <div
+                    class="product-card"
+                    data-category="men">
+
+                    <img
+                        src="images/collection/CKmen.png"
+                        alt="CK Men">
+
+                </div>
+
+
+                <div
+                    class="product-card"
+                    data-category="men">
+
+                    <img
+                        src="images/collection/StrongWithYou.png"
+                        alt="Strong With You">
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
 
 
 
@@ -267,40 +490,66 @@
 
     <footer class="footer">
 
+
         <div class="footer-container">
 
-            <p>
-                © 2026 All rights reserved.
-            </p>
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo">
+
+                    florence
+
+                </a>
+
+                <p class="footer-tagline">
+                    A scent for every you.
+                </p>
+
+            </div>
 
 
-            <div class="social-icons">
+
+            <nav class="footer-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="collection.html">
+                    Collection
+                </a>
+
+                <a href="delivery.html">
+                    Stores
+                </a>
+
+            </nav>
 
 
-                <!-- FACEBOOK -->
+
+            <div class="footer-socials">
+
 
                 <a
                     href="https://www.facebook.com/share/1DfZagzYTm/?mibextid=wwXIfr"
-                    class="social-icon"
                     aria-label="Facebook">
 
                     <svg viewBox="0 0 24 24">
 
                         <path
-                            d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.5l.5-4H13V9c0-.7.3-1 1-1z"
-                            fill="currentColor"/>
+                            d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.5l.5-4H13V9c0-.7.3-1 1-1z">
+                        </path>
 
                     </svg>
 
                 </a>
 
 
-
-                <!-- INSTAGRAM -->
-
                 <a
                     href="https://www.instagram.com/florenceperfumes.ph?stkn=b3QwMWhmd2N6M2Qy"
-                    class="social-icon"
                     aria-label="Instagram">
 
                     <svg viewBox="0 0 24 24">
@@ -311,35 +560,43 @@
                             width="18"
                             height="18"
                             rx="5"
-                            ry="5"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"/>
+                            ry="5">
+                        </rect>
 
                         <circle
                             cx="12"
                             cy="12"
-                            r="4"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"/>
+                            r="4">
+                        </circle>
 
                         <circle
                             cx="17.5"
                             cy="6.5"
-                            r="1"
-                            fill="currentColor"/>
+                            r="1">
+                        </circle>
 
                     </svg>
 
                 </a>
 
-
             </div>
+
 
         </div>
 
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Florence Perfume PH. All rights reserved.
+            </p>
+
+        </div>
+
+
     </footer>
+
 
 
     <script src="js/collection.js"></script>

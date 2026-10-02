@@ -3,11 +3,22 @@
    COLLECTION PAGE
 ========================================================= */
 
+
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 html,
 body {
@@ -15,24 +26,175 @@ body {
     min-height: 100%;
 }
 
-body {
-    font-family: "Cormorant Garamond", Georgia, serif;
 
-    color: #111111;
+body {
+    font-family: "Montserrat", Arial, sans-serif;
+
+    color: #222222;
+
     background-color: #FFFFFF;
 
     min-height: 100vh;
 
     display: flex;
     flex-direction: column;
+
+    overflow-x: hidden;
 }
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+
+.collection-intro {
+    position: relative;
+
+    width: 100%;
+    min-height: 440px;
+
+    padding: 100px 20px 90px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #FFFFFF 0%,
+            #FAF8F5 55%,
+            #F3EEE8 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* Soft warm mist on the right */
+
+.collection-intro::before {
+    content: "";
+
+    position: absolute;
+
+    width: 480px;
+    height: 230px;
+
+    top: -80px;
+    right: -100px;
+
+    background: rgba(231, 220, 207, 0.55);
+
+    border-radius: 50%;
+
+    filter: blur(65px);
+
+    pointer-events: none;
+}
+
+
+/* Soft warm mist on the left */
+
+.collection-intro::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 180px;
+
+    left: -120px;
+    bottom: -90px;
+
+    background: rgba(244, 238, 230, 0.8);
+
+    border-radius: 50%;
+
+    filter: blur(60px);
+
+    pointer-events: none;
+}
+
+
+/* Eyebrow */
+
+.intro-eyebrow {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 16px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+
+    letter-spacing: 3.5px;
+
+    color: #8D8173;
+}
+
+
+.collection-intro h1 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(48px, 5vw, 62px);
+    font-weight: 400;
+
+    letter-spacing: 2px;
+    line-height: 1.05;
+
+    color: #222222;
+}
+
+
+.intro-description {
+    position: relative;
+    z-index: 1;
+
+    max-width: 600px;
+
+    margin-top: 20px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: 300;
+
+    line-height: 1.8;
+    letter-spacing: 1px;
+
+    color: #777777;
+}
+
+
 
 /* =========================================================
    COLLECTION PAGE
+   SIDEBAR + PRODUCTS ONLY
 ========================================================= */
 
 .collection-page {
+    position: relative;
+
     width: 100%;
+
     max-width: 1450px;
 
     margin: 0 auto;
@@ -43,10 +205,57 @@ body {
 
     grid-template-columns: 230px 1fr;
 
-    column-gap: 55px;
+    column-gap: 65px;
 
-    padding: 80px 65px 110px;
+    padding: 85px 65px 130px;
+
+    overflow: hidden;
 }
+
+
+/* Soft page atmosphere */
+
+.collection-page::before {
+    content: "";
+
+    position: absolute;
+
+    left: -180px;
+    top: 150px;
+
+    width: 430px;
+    height: 220px;
+
+    background: rgba(241, 233, 223, 0.72);
+
+    border-radius: 50%;
+
+    filter: blur(60px);
+
+    pointer-events: none;
+}
+
+
+.collection-page::after {
+    content: "";
+
+    position: absolute;
+
+    right: -180px;
+    bottom: 100px;
+
+    width: 430px;
+    height: 220px;
+
+    background: rgba(243, 236, 228, 0.8);
+
+    border-radius: 50%;
+
+    filter: blur(60px);
+
+    pointer-events: none;
+}
+
 
 
 /* =========================================================
@@ -54,85 +263,158 @@ body {
 ========================================================= */
 
 .collection-sidebar {
+    position: relative;
+
     width: 100%;
+
+    z-index: 2;
 }
 
 
-.collection-sidebar h1 {
-    margin: 0 0 30px;
+.collection-sidebar-title {
+    padding-left: 20px;
 
-    padding-left: 35px;
+    margin-bottom: 38px;
+}
+
+
+.collection-eyebrow {
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    color: #8B6335;
+}
+
+
+.collection-sidebar h2 {
+    margin: 0;
 
     font-family: "Cormorant Garamond", Georgia, serif;
 
-    font-size: 24px;
+    font-size: 32px;
+
     font-weight: 400;
 
-    letter-spacing: 0.2px;
+    letter-spacing: 2px;
+
+    line-height: 1.1;
+
+    color: #222222;
 }
 
 
-/* CATEGORY LIST */
+.collection-line {
+    width: 42px;
+
+    height: 1px;
+
+    margin-top: 15px;
+
+    background-color: #8D8173;
+}
+
+
+
+/* =========================================================
+   CATEGORY LIST
+========================================================= */
 
 .category-list {
     width: 100%;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: stretch;
+
+    gap: 4px;
 }
 
 
 .category {
+    position: relative;
+
     width: 100%;
-    height: 48px;
+
+    min-height: 48px;
+
+    padding: 0 20px;
 
     border: none;
 
     background-color: transparent;
 
-    color: #111111;
+    color: #555555;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Montserrat", Arial, sans-serif;
 
-    font-size: 18px;
+    font-size: 11px;
+
     font-weight: 400;
+
+    letter-spacing: 2px;
+
+    text-align: left;
 
     cursor: pointer;
 
     transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
+        background-color 0.3s ease,
+        color 0.3s ease,
+        padding-left 0.3s ease;
 }
 
 
-/* ACTIVE CATEGORY */
+/* Active */
 
 .category.active {
-    background-color: #1F1F1F;
+    background-color: #8B6335;
 
     color: #FFFFFF;
 }
 
 
-/* CATEGORY HOVER */
+/* Hover */
 
 .category:not(.active):hover {
-    background-color: #F3F3F3;
+    background-color: #F5F0EA;
+
+    color: #222222;
+
+    padding-left: 25px;
 }
+
 
 
 /* =========================================================
-   PRODUCTS
+   PRODUCTS SECTION
 ========================================================= */
 
 .products-section {
+    position: relative;
+
     width: 100%;
 
-    padding: 0 10px;
+    min-width: 0;
+
+    padding: 0 5px;
+
+    z-index: 2;
 }
 
+
+
+/* =========================================================
+   PRODUCTS GRID
+========================================================= */
 
 .products-grid {
     width: 100%;
@@ -142,35 +424,50 @@ body {
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    column-gap: 50px;
+    column-gap: 55px;
 
-    row-gap: 80px;
+    row-gap: 75px;
 
     align-items: start;
 }
 
-/* PRODUCT CARD */
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
 
 .product-card {
+    position: relative;
+
     width: 100%;
 
+    min-width: 0;
+
     text-align: center;
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition:
+        transform 0.45s ease,
+        opacity 0.45s ease;
 }
 
 
-/* CLICKABLE IMAGE */
+/* Product hover */
 
-.product-image-link {
-    display: block;
-
-    text-decoration: none;
+.product-card:hover {
+    transform: translateY(-6px);
 }
 
 
-/* PRODUCT IMAGE */
+/* Product image */
 
 .product-card img {
     width: 100%;
+
     max-width: 500px;
 
     height: auto;
@@ -181,93 +478,124 @@ body {
 
     object-fit: contain;
 
-    transition: transform 0.25s ease;
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
 }
 
 
-/* IMAGE HOVER */
+/* Image hover */
 
-.product-image-link:hover img {
-    transform: scale(1.03);
+.product-card:hover img {
+    transform: scale(1.025);
+
+    filter:
+        drop-shadow(
+            0 15px 20px rgba(70, 65, 60, 0.1)
+        );
 }
 
 
-/* PRODUCT NAME */
+/* Hidden products */
 
-.product-card h2 {
-    margin-top: 18px;
-
-    font-family: "Cormorant Garamond", Georgia, serif;
-
-    font-size: 18px;
-    font-weight: 400;
-
-    line-height: 1.2;
-
-    color: #111111;
+.product-card.hidden {
+    display: none;
 }
+
+
 
 /* =========================================================
    TABLET
+   1100px
 ========================================================= */
 
 @media (max-width: 1100px) {
 
+    .collection-intro {
+        min-height: 300px;
+
+        padding: 75px 30px 65px;
+    }
+
+
     .collection-page {
         grid-template-columns: 200px 1fr;
 
-        column-gap: 40px;
+        column-gap: 45px;
 
-        padding: 70px 45px 90px;
+        padding: 75px 45px 100px;
     }
 
 
     .products-grid {
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
+        column-gap: 35px;
 
-        column-gap: 30px;
-
-        row-gap: 55px;
+        row-gap: 60px;
     }
 
 
     .product-card img {
-        max-width: 220px;
+        max-width: 420px;
     }
+
 }
+
 
 
 /* =========================================================
    TABLET / SMALL LAPTOP
+   900px
 ========================================================= */
 
 @media (max-width: 900px) {
 
-    /* COLLECTION */
+    .collection-intro {
+        min-height: 285px;
+
+        padding: 70px 25px 60px;
+    }
+
+
+    .collection-intro h1 {
+        font-size: 44px;
+    }
+
 
     .collection-page {
         grid-template-columns: 175px 1fr;
 
-        column-gap: 30px;
+        column-gap: 35px;
 
-        padding: 60px 30px 80px;
+        padding: 65px 30px 90px;
     }
 
 
-    .collection-sidebar h1 {
-        font-size: 22px;
+    /* Sidebar */
+
+    .collection-sidebar-title {
+        padding-left: 10px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .collection-sidebar h2 {
+        font-size: 28px;
     }
 
 
     .category {
-        height: 44px;
+        min-height: 45px;
 
-        font-size: 17px;
+        padding: 0 15px;
+
+        font-size: 10px;
+
+        letter-spacing: 1.7px;
     }
 
 
-    /* PRODUCTS */
+    /* Products */
 
     .products-grid {
         column-gap: 25px;
@@ -276,49 +604,125 @@ body {
     }
 
 
-    .product-card h2 {
-        font-size: 17px;
+    .product-card img {
+        max-width: 100%;
     }
+
 }
+
 
 
 /* =========================================================
    MOBILE
+   600px
 ========================================================= */
 
 @media (max-width: 600px) {
 
-    /* COLLECTION */
+    /* Intro */
+
+    .collection-intro {
+        min-height: 270px;
+
+        padding: 65px 20px 60px;
+    }
+
+
+    .intro-eyebrow {
+        font-size: 8px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .collection-intro h1 {
+        font-size: 36px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .intro-description {
+        max-width: 340px;
+
+        margin-top: 13px;
+
+        font-size: 10px;
+
+        line-height: 1.7;
+
+        letter-spacing: 0.8px;
+    }
+
+
+    /* Collection area */
 
     .collection-page {
         display: block;
 
-        padding: 45px 20px 70px;
+        padding: 60px 20px 80px;
     }
 
+
+    /* Sidebar */
 
     .collection-sidebar {
-        margin-bottom: 45px;
+        margin-bottom: 55px;
     }
 
 
-    .collection-sidebar h1 {
-        font-size: 22px;
+    .collection-sidebar-title {
+        padding-left: 5px;
 
-        margin-bottom: 22px;
+        margin-bottom: 25px;
+    }
 
-        padding-left: 10px;
+
+    .collection-eyebrow {
+        font-size: 8px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .collection-sidebar h2 {
+        font-size: 30px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .collection-line {
+        width: 38px;
+
+        margin-top: 13px;
+    }
+
+
+    /* Categories */
+
+    .category-list {
+        gap: 3px;
     }
 
 
     .category {
-        height: 44px;
+        min-height: 43px;
 
-        font-size: 16px;
+        padding: 0 15px;
+
+        font-size: 10px;
+
+        letter-spacing: 1.8px;
     }
 
 
-    /* PRODUCTS */
+    .category:not(.active):hover {
+        padding-left: 20px;
+    }
+
+
+    /* Products */
 
     .products-section {
         padding: 0;
@@ -329,20 +733,84 @@ body {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
 
-        column-gap: 22px;
+        column-gap: 20px;
 
         row-gap: 45px;
     }
 
 
+    .product-card:hover {
+        transform: translateY(-4px);
+    }
+
+
     .product-card img {
+        width: 100%;
+
         max-width: 100%;
     }
 
+}
 
-    .product-card h2 {
-        font-size: 16px;
 
-        margin-top: 13px;
+
+/* =========================================================
+   VERY SMALL PHONES
+   380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .collection-intro {
+        padding-left: 15px;
+        padding-right: 15px;
     }
+
+
+    .collection-intro h1 {
+        font-size: 32px;
+    }
+
+
+    .intro-description {
+        font-size: 9.5px;
+    }
+
+
+    .collection-page {
+        padding:
+            55px
+            15px
+            70px;
+    }
+
+
+    .collection-sidebar {
+        margin-bottom: 45px;
+    }
+
+
+    .collection-sidebar-title {
+        padding-left: 0;
+    }
+
+
+    .collection-sidebar h2 {
+        font-size: 28px;
+    }
+
+
+    .category {
+        min-height: 42px;
+
+        font-size: 9px;
+    }
+
+
+    .products-grid {
+        column-gap: 15px;
+
+        row-gap: 38px;
+    }
+
 }

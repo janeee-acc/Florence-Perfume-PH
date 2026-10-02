@@ -28,64 +28,100 @@
 
 <body>
 
-    <div class="price-popup">
-    <button class="close-popup" onclick="this.parentElement.style.display='none'">×</button>
-
-    <h2>FLORENCE PERFUMES</h2>
-    <h3>AVAILABLE SIZES</h3>
-
-    <p>10 ML — ₱149</p>
-    <p>50 ML — ₱389</p>
-    <p>100 ML — ₱729</p>
-</div>
-
     <!-- =====================================================
          NAVIGATION BAR
     ====================================================== -->
 
-    <header class="navbar">
+<header class="navbar">
 
-        <div class="nav-container">
+    <div class="nav-top">
+
+        <!-- SEARCH -->
+        <button class="nav-search" type="button" aria-label="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                <line x1="15.5" y1="15.5" x2="21" y2="21"></line>
+            </svg>
+        </button>
 
 
-            <!-- LOGO -->
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+            florence 
+        </a>
 
-            <a href="index.html" class="logo">
-                florence
-            </a>
 
+            <!-- SOCIAL MEDIA -->
 
-            <!-- NAVIGATION LINKS -->
-
-            <nav class="nav-menu">
+            <div class="nav-socials">
 
                 <a
-                    href="index.html"
-                    class="nav-link active"
+                    href="https://www.facebook.com/share/1DfZagzYTm/?mibextid=wwXIfr"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                    Home
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.5l.5-4H13V9c0-.7.3-1 1-1z"
+                        ></path>
+                    </svg>
                 </a>
 
 
                 <a
-                    href="collection.html"
-                    class="nav-link"
+                    href="https://www.instagram.com/florenceperfumes.ph?stkn=b3QwMWhmd2N6M2Qy"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                    Collections
+                    <svg viewBox="0 0 24 24">
+                        <rect
+                            x="3"
+                            y="3"
+                            width="18"
+                            height="18"
+                            rx="5"
+                            ry="5"
+                        ></rect>
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                        ></circle>
+
+                        <circle
+                            cx="17.5"
+                            cy="6.5"
+                            r="1"
+                        ></circle>
+                    </svg>
                 </a>
 
-                <a
-                    href="delivery.html"
-                    class="nav-link"
-                >
-                    Shop
-                </a>
-
-            </nav>
+            </div>
 
         </div>
 
-    </header>
+
+    <!-- NAVIGATION LINKS -->
+    <nav class="nav-menu">
+
+        <a href="index.html" class="nav-link active">
+            Home
+        </a>
+
+        <a href="collection.html" class="nav-link">
+            Collection
+        </a>
+
+        <a href="delivery.html" class="nav-link">
+            Stores
+        </a>
+
+    </nav>
+
+</header>
 
 
 
@@ -111,19 +147,6 @@
                 class="hero-image"
             >
 
-
-            <!-- HERO CONTENT -->
-
-            <div class="hero-content">
-
-
-                <h1>
-                    A scent for<br>
-                    every you.
-                </h1>
-
-</div>
-
         </section>
 
 
@@ -137,11 +160,15 @@
 
             <!-- SECTION TITLE -->
 
-            <div class="section-title">
+            <div class="section-title best-seller-title">
 
-                <h2>
-                    Best Seller
-                </h2>
+                <p class="section-eyebrow">
+                    FLORENCE PERFUME PH FAVORITES
+                </p>
+
+                <p class="section-subtitle">
+                    Discover the scents everyone loves.
+                </p>
 
                 <div class="title-line"></div>
 
@@ -275,15 +302,19 @@
 
             <!-- SECTION TITLE -->
 
-            <div class="section-title">
+<div class="section-title collection-title">
 
-                <h2>
-                    Collection
-                </h2>
+    <p class="section-eyebrow">
+        FIND YOUR SIGNATURE
+    </p>
 
-                <div class="title-line"></div>
+    <p class="section-subtitle">
+        Explore fragrances for every mood and every you.
+    </p>
 
-            </div>
+    <div class="title-line"></div>
+
+</div>
 
 
 
@@ -425,6 +456,23 @@
 
 <section class="more-than-fragrance section">
 
+    <!-- SECTION TITLE -->
+
+    <div class="section-title fragrance-title">
+
+        <p class="section-eyebrow">
+            THE FLORENCE EXPERIENCE
+        </p>
+
+        <p class="section-subtitle">
+            Thoughtfully made for the moments that become memories.
+        </p>
+
+        <div class="title-line"></div>
+
+    </div>
+
+
     <div class="features-container">
 
         <!-- LEFT COLUMN -->
@@ -511,93 +559,113 @@
          FOOTER
     ====================================================== -->
 
-    <footer class="footer">
+<footer class="footer">
 
+    <div class="footer-container">
 
-        <div class="footer-container">
+        <!-- BRAND -->
 
+        <div class="footer-brand">
 
-            <p>
-                © 2026 All rights reserved.
+            <a href="index.html" class="footer-logo">
+                florence
+            </a>
+
+            <p class="footer-tagline">
+                A scent for every you.
             </p>
-
-
-            <div class="social-icons">
-
-                <!-- Facebook -->
-
-                <a
-                    href="https://www.facebook.com/share/1DfZagzYTm/?mibextid=wwXIfr"
-                    aria-label="Facebook"
-                    class="social-icon"
-                >
-
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
-
-                        <path
-                            d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.5l.5-4H13V9c0-.7.3-1 1-1z"
-                            fill="currentColor"
-                        />
-
-                    </svg>
-
-                </a>
-
-
-
-                <!-- Instagram -->
-
-                <a
-                    href="https://www.instagram.com/florenceperfumes.ph?stkn=b3QwMWhmd2N6M2Qy"
-                    aria-label="Instagram"
-                    class="social-icon"
-                >
-
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
-
-                        <rect
-                            x="3"
-                            y="3"
-                            width="18"
-                            height="18"
-                            rx="5"
-                            ry="5"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-
-                        <circle
-                            cx="12"
-                            cy="12"
-                            r="4"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-
-                        <circle
-                            cx="17.5"
-                            cy="6.5"
-                            r="1"
-                            fill="currentColor"
-                        />
-
-                    </svg>
-
-                </a>
-
-            </div>
 
         </div>
 
-    </footer>
+
+        <!-- FOOTER NAVIGATION -->
+
+        <nav class="footer-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="collection.html">
+                Collection
+            </a>
+
+            <a href="delivery.html">
+                Stores
+            </a>
+
+        </nav>
+
+
+        <!-- SOCIAL MEDIA -->
+
+        <div class="footer-socials">
+
+            <a
+                href="#"
+                aria-label="Facebook"
+            >
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.5l.5-4H13V9c0-.7.3-1 1-1z"
+                        fill="currentColor"
+                    />
+                </svg>
+            </a>
+
+
+            <a
+                href="#"
+                aria-label="Instagram"
+            >
+                <svg viewBox="0 0 24 24">
+
+                    <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="5"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                    />
+
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                    />
+
+                    <circle
+                        cx="17.5"
+                        cy="6.5"
+                        r="1"
+                        fill="currentColor"
+                    />
+
+                </svg>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Florence Perfume PH. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
 
     <script src="js/main.js"></script>
 </body>

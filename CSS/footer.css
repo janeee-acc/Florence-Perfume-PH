@@ -1,61 +1,278 @@
 /* =========================================================
    FLORENCE PERFUME PH
-   SHARED FOOTER
+   FOOTER
 ========================================================= */
 
 .footer {
-    width:100%;
-    min-height:125px;
-    background:#EDEDED;
-    display:flex;
-    align-items:center;
+    position: relative;
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #F7F3EE 0%,
+            #EDEDED 100%
+        );
+
+    border-top: 1px solid rgba(180, 180, 180, 0.25);
+
+    color: #222222;
 }
 
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
 
 .footer-container {
-    width:100%;
-    padding:0 4.5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 55px 6% 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    align-items: center;
 }
 
 
-.footer p {
-    font-size:12px;
-    font-weight:300;
-    color:#555;
+/* =========================================================
+   BRAND
+========================================================= */
+
+.footer-brand {
+    text-align: left;
+}
+
+.footer-logo {
+    display: inline-block;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    font-style: italic;
+
+    color: #8b6335;
+
+    text-decoration: none;
+
+    line-height: 1;
+
+    transition:
+        opacity 0.25s ease;
+}
+
+.footer-logo:hover {
+    opacity: 0.6;
 }
 
 
-.social-icons {
-    display:flex;
-    align-items:center;
-    gap:22px;
+.footer-tagline {
+    margin: 12px 0 0;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 300;
+
+    letter-spacing: 1.5px;
+
+    color: #777777;
 }
 
 
-.social-icon {
-    width:24px;
-    height:24px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#111;
-    text-decoration:none;
-    transition:opacity .2s ease;
+/* =========================================================
+   FOOTER NAVIGATION
+========================================================= */
+
+.footer-nav {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.footer-nav a {
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    letter-spacing: 1.5px;
+
+    color: #333333;
+
+    text-decoration: none;
+
+    transition:
+        opacity 0.25s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 0.5;
+}
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
+
+.footer-socials {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 18px;
 }
 
 
-.social-icon svg {
-    width:20px;
-    height:20px;
-    display:block;
+.footer-socials a {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #222222;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
 }
 
 
-.social-icon:hover {
-    opacity:.6;
+/* General SVG */
+
+.footer-socials svg {
+    width: 21px;
+    height: 21px;
+
+    display: block;
+}
+
+
+/* =========================================================
+   FACEBOOK
+========================================================= */
+
+.footer-socials a[aria-label="Facebook"] svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+
+/* =========================================================
+   INSTAGRAM
+========================================================= */
+
+.footer-socials a[aria-label="Instagram"] svg {
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+}
+
+
+/* Hover */
+
+.footer-socials a:hover {
+    opacity: 0.5;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.footer-bottom {
+    width: 100%;
+
+    padding: 16px 6% 20px;
+
+    border-top:
+        1px solid rgba(180, 180, 180, 0.25);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 300;
+
+    letter-spacing: 1px;
+
+    color: #777777;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        text-align: center;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-nav {
+        gap: 25px;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
 }
 
 
@@ -63,14 +280,31 @@
    MOBILE
 ========================================================= */
 
-@media(max-width:900px){
-    .footer{
-        min-height:100px;
+@media (max-width: 600px) {
+
+    .footer-container {
+        padding: 45px 7% 35px;
+
+        gap: 25px;
     }
 
-    .footer-container{
-        padding:20px 5%;
-        flex-direction:column;
-        gap:20px;
+    .footer-logo {
+        font-size: 38px;
     }
+
+    .footer-nav {
+        flex-wrap: wrap;
+
+        gap: 15px 22px;
+    }
+
+    .footer-nav a {
+        font-size: 10px;
+    }
+
+    .footer-bottom {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
 }

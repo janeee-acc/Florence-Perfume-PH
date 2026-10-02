@@ -1,40 +1,39 @@
 /* =========================================================
    FLORENCE PERFUME PH
-   NAVIGATION BAR
-========================================================= */
-
-
-/* =========================================================
-   NAVBAR
+   NAVIGATION
 ========================================================= */
 
 .navbar {
     width: 100%;
-    height: 82px;
+    height: 150px;
 
-    background-color: #EDEDED;
+    background:
+        linear-gradient(
+            180deg,
+            #FFFFFF 0%,
+            #FCFDFD 100%
+        );
 
-    position: sticky;
-    top: 0;
+    position: relative;
+    z-index: 10;
 
-    z-index: 1000;
+    border-bottom: 1px solid rgba(180, 180, 180, 0.18);
 }
 
 
 /* =========================================================
-   NAVIGATION CONTAINER
+   TOP ROW
 ========================================================= */
 
-.nav-container {
-    width: 100%;
-    height: 100%;
+.nav-top {
+    position: relative;
 
-    padding: 0 4.5%;
+    width: 100%;
+    height: 105px;
 
     display: flex;
-
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
@@ -43,19 +42,150 @@
 ========================================================= */
 
 .logo {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size: 31px;
+    font-size: 48px;
 
-    font-weight: 400;
+    font-weight: 500;
+
+    font-style: italic;
 
     letter-spacing: 0.5px;
 
-    color: #111111;
+    color: #8B6335;
 
     text-decoration: none;
 
-    white-space: nowrap;
+    line-height: 1;
+
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.nav-search {
+    position: absolute;
+
+    left: 7%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #222222;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nav-search svg {
+    width: 25px;
+    height: 25px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.4;
+
+    stroke-linecap: round;
+}
+
+.nav-search:hover {
+    opacity: 0.55;
+
+    transform:
+        translateY(-50%)
+        scale(1.05);
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
+
+.nav-socials {
+    position: absolute;
+
+    right: 7%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.nav-socials a {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #222222;
+
+    text-decoration: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nav-socials svg {
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+}
+
+.nav-socials a:first-child svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+.nav-socials a:hover {
+    opacity: 0.5;
+
+    transform: translateY(-2px);
 }
 
 
@@ -64,11 +194,16 @@
 ========================================================= */
 
 .nav-menu {
+    width: 100%;
+
+    height: 45px;
+
     display: flex;
 
     align-items: center;
+    justify-content: center;
 
-    gap: 42px;
+    gap: 85px;
 }
 
 
@@ -79,19 +214,30 @@
 .nav-link {
     position: relative;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
-    font-size: 20px;
+    font-size: 13px;
 
     font-weight: 400;
 
-    padding: 7px 0;
+    letter-spacing: 1.8px;
 
-    color: #111111;
+    color: #222222;
 
     text-decoration: none;
 
-    white-space: nowrap;
+    padding: 8px 0;
+
+    transition:
+        opacity 0.25s ease,
+        color 0.25s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.55;
 }
 
 
@@ -110,16 +256,7 @@
     width: 100%;
     height: 1px;
 
-    background-color: #111111;
-}
-
-
-/* =========================================================
-   HOVER
-========================================================= */
-
-.nav-link:hover {
-    opacity: 0.6;
+    background-color: #8B6335;
 }
 
 
@@ -129,21 +266,27 @@
 
 @media (max-width: 900px) {
 
-    .nav-container {
-        padding: 0 5%;
+    .navbar {
+        height: 140px;
     }
 
-    .nav-menu {
-        gap: 28px;
-    }
-
-    .nav-link {
-        font-size: 18px;
+    .nav-top {
+        height: 95px;
     }
 
     .logo {
-        font-size: 29px;
+        font-size: 43px;
     }
+
+    .nav-menu {
+        gap: 50px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
 }
 
 
@@ -154,35 +297,36 @@
 @media (max-width: 600px) {
 
     .navbar {
-        height: auto;
-        min-height: 75px;
+        height: 125px;
     }
 
-    .nav-container {
-        padding: 15px 5%;
-
-        flex-wrap: wrap;
-
-        row-gap: 12px;
+    .nav-top {
+        height: 85px;
     }
 
     .logo {
-        font-size: 28px;
+        font-size: 38px;
+    }
+
+    .nav-search {
+        left: 5%;
+    }
+
+    .nav-socials {
+        right: 5%;
+        gap: 10px;
     }
 
     .nav-menu {
-        width: 100%;
-
-        justify-content: center;
-
-        gap: 20px;
+        gap: 22px;
+        height: 40px;
     }
 
     .nav-link {
-        font-size: 17px;
-
-        padding: 5px 0;
+        font-size: 10px;
+        letter-spacing: 1px;
     }
+
 }
 
 
@@ -190,22 +334,18 @@
    VERY SMALL PHONES
 ========================================================= */
 
-@media (max-width: 380px) {
-
-    .nav-container {
-        padding-left: 4%;
-        padding-right: 4%;
-    }
+@media (max-width: 400px) {
 
     .logo {
-        font-size: 26px;
+        font-size: 34px;
     }
 
     .nav-menu {
-        gap: 15px;
+        gap: 16px;
     }
 
     .nav-link {
-        font-size: 15px;
+        font-size: 9px;
     }
+
 }

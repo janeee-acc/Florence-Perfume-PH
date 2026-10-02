@@ -6,15 +6,10 @@ function filterProducts(selectedCategory) {
 
     productCards.forEach((card) => {
 
-        if (card.dataset.category === selectedCategory) {
-
-            card.style.display = "";
-
-        } else {
-
-            card.style.display = "none";
-
-        }
+        card.classList.toggle(
+            "hidden",
+            card.dataset.category !== selectedCategory
+        );
 
     });
 
@@ -48,9 +43,7 @@ categoryButtons.forEach((button) => {
 });
 
 
-// =========================================================
-// DEFAULT CATEGORY
+// Default category
 // Show Unisex when the Collection page first loads
-// =========================================================
 
 filterProducts("unisex");
