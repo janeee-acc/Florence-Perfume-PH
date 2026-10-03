@@ -534,7 +534,6 @@ body {
     letter-spacing: 2px;
     color: #777777;
 }
-
 /* =========================================================
    TABLET
 ========================================================= */
@@ -542,64 +541,383 @@ body {
 @media (max-width: 900px) {
 
     .delivery-hero {
-        height: 500px;
+        height: 440px;
     }
 
+    .delivery-hero-image {
+        object-position: center;
+    }
+
+
+    /* CHECKOUT SECTION */
 
     .checkout-section {
         padding:
-            85px
-            5%
-            100px;
+            80px
+            6%
+            90px;
     }
 
+
+    /* TITLE */
 
     .delivery-section-title {
-        max-width: 720px;
+        max-width: 680px;
     }
 
-
     .delivery-section-title h2 {
-        font-size:
-            clamp(
-                40px,
-                6vw,
-                52px
-            );
-
+        font-size: 46px;
         letter-spacing: 5px;
     }
 
-
     .delivery-section-title .section-subtitle {
-        max-width: 600px;
+        max-width: 560px;
 
         font-size: 11px;
+        line-height: 1.8;
+        letter-spacing: 1px;
     }
 
+
+    /* SHOP MESSAGE */
+
+    .shop-cta {
+        margin-top: 55px;
+
+        text-align: center;
+
+        font-size: 9px;
+        letter-spacing: 1.8px;
+    }
+
+
+    /* STORE CARDS */
 
     .shopping-platforms {
-        width: 100%;
-        max-width: 850px;
+        max-width: 700px;
+
+        margin-top: 40px;
 
         grid-template-columns:
-            repeat(3, minmax(0, 1fr));
+            repeat(2, minmax(0, 1fr));
 
-        gap: 20px;
+        gap: 22px;
     }
-
 
     .shopping-platform {
         padding:
-            20px
-            15px
-            25px;
+            22px
+            18px
+            27px;
     }
-
 
     .platform-image {
         width: 160px;
         height: 135px;
+    }
+
+
+    /* Center third card */
+
+    .shopping-platform:last-child {
+        grid-column: 1 / -1;
+
+        width: calc(50% - 11px);
+
+        justify-self: center;
+    }
+
+
+    /* BACK TO COLLECTION */
+
+    .back-to-collection {
+        margin-top: 55px;
+    }
+
+    .back-to-collection span {
+        font-size: 24px;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* HERO */
+
+    .delivery-hero {
+        height: 340px;
+    }
+
+    .delivery-hero-image {
+        width: 100%;
+        height: 100%;
+
+        min-height: 0;
+
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+    /* Reduce decorative effects */
+
+    .delivery-hero::after {
+        bottom: -70px;
+
+        width: 100%;
+        height: 130px;
+
+        filter: blur(45px);
+    }
+
+
+    /* CHECKOUT */
+
+    .checkout-section {
+        padding:
+            65px
+            7%
+            75px;
+    }
+
+
+    /* TITLE */
+
+    .delivery-section-title {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .delivery-section-title .section-eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 8px;
+        letter-spacing: 2.5px;
+    }
+
+    .delivery-section-title h2 {
+        font-size: 38px;
+
+        line-height: 1.1;
+
+        letter-spacing: 3px;
+    }
+
+    .delivery-section-title .section-subtitle {
+        max-width: 390px;
+
+        margin-top: 13px;
+
+        font-size: 10px;
+
+        line-height: 1.8;
+
+        letter-spacing: 0.6px;
+    }
+
+    .delivery-section-title .title-line {
+        width: 45px;
+
+        margin-top: 14px;
+    }
+
+
+    /* SHOP MESSAGE */
+
+    .shop-cta {
+        margin-top: 45px;
+
+        padding: 0 10px;
+
+        text-align: center;
+
+        font-size: 8px;
+
+        line-height: 1.7;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* STORE CARDS */
+
+    .shopping-platforms {
+        width: 100%;
+        max-width: 360px;
+
+        margin-top: 30px;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .shopping-platform {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        padding:
+            20px
+            18px
+            24px;
+    }
+
+
+    /* Reset tablet third-card rule */
+
+    .shopping-platform:last-child {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+
+    /* STORE IMAGES */
+
+    .platform-image {
+        width: 150px;
+        height: 125px;
+    }
+
+    .shopping-platform p {
+        margin-top: 8px;
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* Disable hover movement on touch screens */
+
+    .shopping-platform:hover {
+        transform: none;
+    }
+
+    .shopping-platform:hover img {
+        transform: none;
+    }
+
+
+    /* BACK TO COLLECTION */
+
+    .back-to-collection {
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    .back-to-collection span {
+        font-size: 22px;
+
+        letter-spacing: 1.2px;
+    }
+
+    .back-line {
+        width: 45px;
+    }
+
+}
+
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    /* HERO */
+
+    .delivery-hero {
+        height: 290px;
+    }
+
+
+    /* CHECKOUT */
+
+    .checkout-section {
+        padding:
+            55px
+            6%
+            65px;
+    }
+
+
+    /* TITLE */
+
+    .delivery-section-title .section-eyebrow {
+        font-size: 7px;
+
+        letter-spacing: 2px;
+    }
+
+    .delivery-section-title h2 {
+        font-size: 32px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .delivery-section-title .section-subtitle {
+        max-width: 310px;
+
+        font-size: 9px;
+
+        line-height: 1.8;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    /* SHOP MESSAGE */
+
+    .shop-cta {
+        margin-top: 40px;
+
+        font-size: 7px;
+
+        letter-spacing: 1.3px;
+    }
+
+
+    /* STORE CARDS */
+
+    .shopping-platforms {
+        max-width: 300px;
+
+        margin-top: 25px;
+
+        gap: 16px;
+    }
+
+    .shopping-platform {
+        padding:
+            18px
+            15px
+            22px;
+    }
+
+    .platform-image {
+        width: 135px;
+        height: 115px;
+    }
+
+
+    /* BACK TO COLLECTION */
+
+    .back-to-collection {
+        margin-top: 45px;
+    }
+
+    .back-to-collection span {
+        font-size: 20px;
     }
 
 }
@@ -612,116 +930,63 @@ body {
 @media (max-width: 600px) {
 
     .delivery-hero {
-        height: auto;
-
-        min-height: 0;
-
-        aspect-ratio: auto;
+        height: 340px;
     }
-
 
     .delivery-hero-image {
         width: 100%;
-        height: auto;
-
-        min-height: 380px;
-
+        height: 100%;
+        min-height: 0;
         object-fit: cover;
         object-position: center;
     }
 
-
-
     .checkout-section {
         padding:
-            70px
+            65px
             7%
-            90px;
+            75px;
     }
-
-
-    .delivery-section-title {
-        max-width: 100%;
-    }
-
-
-    .delivery-section-title .section-eyebrow {
-        font-size: 8px;
-
-        letter-spacing: 2.5px;
-    }
-
 
     .delivery-section-title h2 {
         font-size: 38px;
-
-        letter-spacing: 4px;
+        letter-spacing: 3px;
     }
-
 
     .delivery-section-title .section-subtitle {
-        max-width: 430px;
-
+        max-width: 390px;
         font-size: 10px;
-
         line-height: 1.8;
-
-        letter-spacing: 0.8px;
+        letter-spacing: 0.6px;
     }
-
-
-    .delivery-section-title .title-line {
-        width: 50px;
-    }
-
 
     .shopping-platforms {
         width: 100%;
+        max-width: 360px;
+        margin-top: 30px;
 
-        margin-top: 45px;
-
-        grid-template-columns:
-            1fr;
-
-        gap: 22px;
+        grid-template-columns: 1fr;
+        gap: 18px;
     }
-
 
     .shopping-platform {
         width: 100%;
-        max-width: 340px;
-
-        margin:
-            0
-            auto;
-
-        padding:
-            22px
-            18px
-            27px;
+        max-width: 100%;
+        padding: 20px 18px 24px;
     }
-
 
     .platform-image {
-        width: 160px;
-        height: 135px;
+        width: 150px;
+        height: 125px;
     }
-
-
-    .shopping-platform p {
-        font-size: 8px;
-    }
-
 
     .back-to-collection {
-        margin-top: 60px;
+        margin-top: 50px;
     }
-
 
     .back-to-collection span {
-        font-size: 23px;
+        font-size: 22px;
     }
-
 }
 
 
@@ -729,61 +994,45 @@ body {
    VERY SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
 
-    .delivery-hero-image {
-        min-height: 330px;
+    .delivery-hero {
+        height: 290px;
     }
-
 
     .checkout-section {
         padding:
-            60px
+            55px
             6%
-            80px;
+            65px;
     }
-
 
     .delivery-section-title h2 {
-        font-size: 33px;
-
-        letter-spacing: 3px;
+        font-size: 32px;
+        letter-spacing: 2.5px;
     }
-
 
     .delivery-section-title .section-subtitle {
+        max-width: 310px;
         font-size: 9px;
+        line-height: 1.8;
     }
-
 
     .shopping-platforms {
-        gap: 18px;
+        max-width: 300px;
+        gap: 16px;
     }
-
 
     .shopping-platform {
-        max-width: 300px;
-
-        padding:
-            20px
-            15px
-            25px;
+        padding: 18px 15px 22px;
     }
-
 
     .platform-image {
-        width: 145px;
-        height: 125px;
+        width: 135px;
+        height: 115px;
     }
-
-
-    .back-to-collection {
-        margin-top: 50px;
-    }
-
 
     .back-to-collection span {
-        font-size: 21px;
+        font-size: 20px;
     }
-
 }
