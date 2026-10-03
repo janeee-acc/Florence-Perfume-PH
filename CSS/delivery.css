@@ -541,13 +541,26 @@ body {
 @media (max-width: 900px) {
 
     .delivery-hero {
-        height: 440px;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        overflow: hidden;
+        background: #FFFFFF;
     }
 
     .delivery-hero-image {
-        object-position: center;
-    }
+        display: block;
 
+        width: 100%;
+        height: auto;
+
+        min-height: 0;
+
+        object-fit: contain;
+        object-position: center;
+
+        max-width: 100%;
+    }
 
     /* CHECKOUT SECTION */
 
@@ -651,16 +664,22 @@ body {
     /* HERO */
 
     .delivery-hero {
-        height: 340px;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+
+        overflow: hidden;
     }
 
     .delivery-hero-image {
+        display: block;
+
         width: 100%;
-        height: 100%;
+        height: auto;
 
         min-height: 0;
 
-        object-fit: cover;
+        object-fit: contain;
         object-position: center;
     }
 
@@ -837,7 +856,15 @@ body {
     /* HERO */
 
     .delivery-hero {
-        height: 290px;
+        width: 100%;
+        height: auto;
+    }
+
+    .delivery-hero-image {
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
     }
 
 
