@@ -125,6 +125,61 @@
         scale(1.05);
 }
 
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.search-box {
+    position: absolute;
+
+    left: calc(7% + 40px);
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 290px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.search-box.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 8px 0;
+
+    border: none;
+    border-bottom: 1px solid #8B6335;
+
+    background: transparent;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 300;
+
+    letter-spacing: 1px;
+
+    color: #222222;
+
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: #999999;
+}
 
 /* =========================================================
    SOCIAL MEDIA
@@ -327,7 +382,17 @@
         letter-spacing: 1px;
     }
 
+    .search-box {
+        left: 5%;
+        width: 160px;
+    }
+
+    .search-box input {
+        font-size: 10px;
+    }
+
 }
+
 
 
 /* =========================================================

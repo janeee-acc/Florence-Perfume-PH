@@ -40,10 +40,12 @@
 
             <!-- SEARCH -->
 
-            <button
-                class="nav-search"
-                type="button"
-                aria-label="Search">
+                <button
+                    class="nav-search"
+                    id="searchButton"
+                    aria-label="Search"
+                    type="button"
+                >
 
                 <svg viewBox="0 0 24 24">
 
@@ -64,7 +66,16 @@
 
             </button>
 
+            <div class="search-box" id="searchBox">
 
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search fragrances..."
+                    autocomplete="off"
+                >
+
+            </div>
 
             <!-- LOGO -->
 
@@ -172,16 +183,16 @@
     <section class="collection-intro">
 
         <p class="intro-eyebrow">
-            FIND YOUR SIGNATURE
+            EXPLORE THE COLLECTION
         </p>
 
         <h1>
-            Explore the Collection
+            Florence Fragrances
         </h1>
 
         <p class="intro-description">
-            Discover fragrances thoughtfully made for every mood,
-            moment, and you.
+            Browse Florence Perfumes' current fragrance offerings
+            for women, men, and unisex wear.
         </p>
 
         <div class="intro-line"></div>
@@ -330,6 +341,15 @@
 
                 </div>
 
+                <div
+                    class="product-card"
+                    data-category="unisex">
+
+                    <img
+                        src="images/collection/LeMatcha.png"
+                        alt="Le Matcha">
+
+                </div>                
 
 
                 <!-- =========================
@@ -346,7 +366,6 @@
                         alt="Delinna">
 
                 </div>
-
 
                 <div
                     class="product-card"
@@ -391,6 +410,15 @@
 
                 </div>
 
+                <div
+                    class="product-card"
+                    data-category="women">
+
+                    <img
+                        src="images/collection/BloomingBouquet.png"
+                        alt="BloomingBouquet">
+
+                </div>
 
                 <div
                     class="product-card"
@@ -401,8 +429,16 @@
                         alt="Very Good Girl Day">
 
                 </div>
+                
+                <div
+                    class="product-card"
+                    data-category="women">
 
+                    <img
+                        src="images/collection/BacRouge.png"
+                        alt="Bac Rouge">
 
+                </div>                
 
                 <!-- =========================
                      MEN
@@ -599,7 +635,8 @@
 
 
 
-    <script src="js/collection.js"></script>
+<script src="js/main.js"></script>
+<script src="js/collection.js"></script>
 
 </body>
 

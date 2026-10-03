@@ -46,26 +46,42 @@
 
             <!-- SEARCH -->
 
-            <button
-                class="nav-search"
-                type="button"
-                aria-label="Search"
-            >
+                <button
+                    class="nav-search"
+                    id="searchButton"
+                    aria-label="Search"
+                    type="button"
+                >
+
                 <svg viewBox="0 0 24 24">
+
                     <circle
                         cx="11"
                         cy="11"
-                        r="6.5"
-                    ></circle>
+                        r="6.5">
+                    </circle>
 
                     <line
                         x1="16"
                         y1="16"
                         x2="21"
-                        y2="21"
-                    ></line>
+                        y2="21">
+                    </line>
+
                 </svg>
+
             </button>
+
+            <div class="search-box" id="searchBox">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search fragrances..."
+                    autocomplete="off"
+                >
+
+            </div>
 
 
             <!-- LOGO -->
@@ -193,19 +209,17 @@
             <div class="delivery-section-title">
 
                 <p class="section-eyebrow">
-                    FIND YOUR FAVORITE
+                    SHOP FLORENCE 
                 </p>
 
                 <h2>
-                    Shop Florence
+                    Where to Shop
                 </h2>
 
                 <p class="section-subtitle">
-                    Discover your favorite Florence fragrances
-                    and explore our collections.
-                    When you find a scent you love,
-                    visit any of the platforms below
-                    to shop.
+                    Find Florence Perfumes PH on the shopping platforms below. 
+                    Browse available fragrances, sizes, and current listings 
+                    directly from each platform.
                 </p>
                 
 
@@ -214,7 +228,7 @@
             </div>
 
                 <p class="shop-cta">
-                    CLICK A PLATFORM BELOW TO SHOP
+                    SELECT A PLATFORM TO SHOP
                 </p>
             <!-- =================================================
                  SHOPPING PLATFORMS
@@ -442,6 +456,8 @@
 
     </footer>
 
+    <script src="js/main.js"></script>
+    
 </body>
 
 </html>

@@ -229,11 +229,11 @@ body {
 
     font-size: 9px;
 
-    font-weight: 400;
+    font-weight: 530;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 
-    color: #8D8173;
+    color: #8B6335;
 }
 
 
@@ -527,12 +527,12 @@ body {
 }
 
 .shop-cta {
-    margin-top: 22px;
+    margin-top: 70px;
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 10px;
     font-weight: 400;
     letter-spacing: 2px;
-    color: #8B6335;
+    color: #777777;
 }
 
 /* =========================================================

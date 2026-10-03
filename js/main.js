@@ -416,3 +416,102 @@ if (
     );
 
 }
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+const searchButton =
+    document.getElementById("searchButton");
+
+const searchBox =
+    document.getElementById("searchBox");
+
+const searchInput =
+    document.getElementById("searchInput");
+
+
+if (
+    searchButton &&
+    searchBox &&
+    searchInput
+) {
+
+    /* OPEN / CLOSE SEARCH */
+
+    searchButton.addEventListener(
+        "click",
+        function () {
+
+            searchBox.classList.toggle("active");
+
+
+            if (
+                searchBox.classList.contains("active")
+            ) {
+
+                searchInput.focus();
+
+            } else {
+
+                searchInput.value = "";
+
+            }
+
+        }
+    );
+
+
+    /* SEARCH */
+
+    searchInput.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key !== "Enter") {
+                return;
+            }
+
+
+            const searchTerm =
+                searchInput.value.trim();
+
+
+            if (searchTerm === "") {
+                return;
+            }
+
+
+            /*
+                Send the search term to
+                the Collection page.
+            */
+
+            window.location.href =
+                "collection.html?search=" +
+                encodeURIComponent(searchTerm);
+
+        }
+    );
+
+
+    /* CLOSE WITH ESC */
+
+    searchInput.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+
+                searchBox.classList.remove(
+                    "active"
+                );
+
+                searchInput.value = "";
+
+            }
+
+        }
+    );
+
+}

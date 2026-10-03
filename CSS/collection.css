@@ -138,11 +138,11 @@ button {
 
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 10px;
-    font-weight: 400;
+    font-weight: 530;
 
     letter-spacing: 3.5px;
 
-    color: #8D8173;
+    color: #8B6335;
 }
 
 
@@ -503,7 +503,25 @@ button {
 }
 
 
+.no-results {
+    grid-column: 1 / -1;
 
+    padding: 60px 20px;
+
+    text-align: center;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+    font-weight: 300;
+
+    letter-spacing: 1px;
+
+    color: #777777;
+}
 /* =========================================================
    TABLET
    1100px
