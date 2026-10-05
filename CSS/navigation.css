@@ -1,10 +1,14 @@
-/* =========================================================
-   FLORENCE PERFUME PH
-   NAVIGATION
-========================================================= */
+/* FLORENCE PERFUME PH */
+
+/* NAVIGATION */
+
+
+/* NAVBAR */
 
 .navbar {
+
     width: 100%;
+
     height: 150px;
 
     background:
@@ -15,33 +19,37 @@
         );
 
     position: relative;
+
     z-index: 10;
 
     border-bottom: 1px solid rgba(180, 180, 180, 0.18);
+
 }
 
 
-/* =========================================================
-   TOP ROW
-========================================================= */
+/* TOP ROW */
 
 .nav-top {
+
     position: relative;
 
     width: 100%;
+
     height: 105px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
 }
 
 
-/* =========================================================
-   LOGO
-========================================================= */
+/* LOGO */
 
 .logo {
+
     font-family:
         "Cormorant Garamond",
         Georgia,
@@ -61,19 +69,16 @@
 
     line-height: 1;
 
-    transition: opacity 0.3s ease;
+    transition:
+        opacity 0.3s ease;
+
 }
 
-.logo:hover {
-    opacity: 0.65;
-}
 
-
-/* =========================================================
-   SEARCH
-========================================================= */
+/* SEARCH */
 
 .nav-search {
+
     position: absolute;
 
     left: 7%;
@@ -83,6 +88,7 @@
     transform: translateY(-50%);
 
     width: 30px;
+
     height: 30px;
 
     padding: 0;
@@ -96,16 +102,22 @@
     cursor: pointer;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     transition:
         opacity 0.25s ease,
         transform 0.25s ease;
+
 }
 
+
 .nav-search svg {
+
     width: 25px;
+
     height: 25px;
 
     fill: none;
@@ -115,24 +127,29 @@
     stroke-width: 1.4;
 
     stroke-linecap: round;
+
 }
 
+
 .nav-search:hover {
+
     opacity: 0.55;
 
     transform:
         translateY(-50%)
         scale(1.05);
+
 }
 
-/* =========================================================
-   SEARCH BOX
-========================================================= */
+
+/* SEARCH BOX */
 
 .search-box {
+
     position: absolute;
 
     left: calc(7% + 40px);
+
     top: 50%;
 
     transform: translateY(-50%);
@@ -140,24 +157,33 @@
     width: 290px;
 
     opacity: 0;
+
     visibility: hidden;
 
     transition:
         opacity 0.25s ease,
         visibility 0.25s ease;
+
 }
+
 
 .search-box.active {
+
     opacity: 1;
+
     visibility: visible;
+
 }
 
+
 .search-box input {
+
     width: 100%;
 
     padding: 8px 0;
 
     border: none;
+
     border-bottom: 1px solid #8B6335;
 
     background: transparent;
@@ -168,6 +194,7 @@
         sans-serif;
 
     font-size: 13px;
+
     font-weight: 300;
 
     letter-spacing: 1px;
@@ -175,17 +202,21 @@
     color: #222222;
 
     outline: none;
+
 }
+
 
 .search-box input::placeholder {
+
     color: #999999;
+
 }
 
-/* =========================================================
-   SOCIAL MEDIA
-========================================================= */
+
+/* SOCIAL MEDIA */
 
 .nav-socials {
+
     position: absolute;
 
     right: 7%;
@@ -199,15 +230,20 @@
     align-items: center;
 
     gap: 18px;
+
 }
 
+
 .nav-socials a {
+
     width: 24px;
+
     height: 24px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     color: #222222;
@@ -217,10 +253,14 @@
     transition:
         opacity 0.25s ease,
         transform 0.25s ease;
+
 }
 
+
 .nav-socials svg {
+
     width: 21px;
+
     height: 21px;
 
     fill: none;
@@ -230,25 +270,35 @@
     stroke-width: 1.6;
 
     stroke-linecap: round;
+
 }
+
+
+/* FACEBOOK */
 
 .nav-socials a:first-child svg {
+
     fill: currentColor;
+
     stroke: none;
+
 }
+
 
 .nav-socials a:hover {
+
     opacity: 0.5;
 
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
+
 }
 
 
-/* =========================================================
-   NAVIGATION MENU
-========================================================= */
+/* NAVIGATION MENU */
 
 .nav-menu {
+
     width: 100%;
 
     height: 45px;
@@ -256,17 +306,18 @@
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 85px;
+
 }
 
 
-/* =========================================================
-   NAVIGATION LINKS
-========================================================= */
+/* NAVIGATION LINKS */
 
 .nav-link {
+
     position: relative;
 
     font-family:
@@ -289,91 +340,128 @@
     transition:
         opacity 0.25s ease,
         color 0.25s ease;
+
 }
+
 
 .nav-link:hover {
+
     opacity: 0.55;
+
 }
 
 
-/* =========================================================
-   ACTIVE LINK
-========================================================= */
+/* ACTIVE LINK */
 
 .nav-link.active::after {
+
     content: "";
 
     position: absolute;
 
     left: 0;
+
     bottom: 0;
 
     width: 100%;
+
     height: 1px;
 
     background-color: #8B6335;
+
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+
+/* TABLET */
 
 @media (max-width: 900px) {
 
     .navbar {
+
         height: 140px;
-        transition: height 0.25s ease;
+
+        transition:
+            height 0.25s ease;
+
     }
 
+
     .nav-top {
+
         height: 95px;
-        transition: height 0.25s ease;
+
+        transition:
+            height 0.25s ease;
+
     }
+
 
     /* LOGO */
 
     .logo {
+
         font-size: 43px;
+
     }
 
 
     /* SEARCH ICON */
 
     .nav-search {
+
         left: 6%;
 
         width: 28px;
+
         height: 28px;
+
     }
 
+
     .nav-search svg {
+
         width: 23px;
+
         height: 23px;
+
     }
 
 
     /* SOCIAL MEDIA */
 
     .nav-socials {
+
         right: 6%;
+
         gap: 12px;
+
     }
+
 
     .nav-socials a {
+
         width: 23px;
+
         height: 23px;
+
     }
 
+
     .nav-socials svg {
+
         width: 20px;
+
         height: 20px;
+
     }
 
 
     /* SEARCH BOX */
 
     .search-box {
+
         left: 50%;
+
         top: 100px;
 
         transform: translateX(-50%);
@@ -381,499 +469,373 @@
         width: 300px;
 
         opacity: 0;
+
         visibility: hidden;
+
     }
 
+
     .search-box input {
+
         font-size: 11px;
+
     }
 
 
     /* MOVE SEARCH TO ITS OWN ROW */
 
     .nav-top:has(.search-box.active) {
+
         height: 135px;
+
     }
 
+
     .navbar:has(.search-box.active) {
+
         height: 180px;
+
     }
 
 
     /* NAVIGATION MENU */
 
     .nav-menu {
+
         height: 45px;
 
         gap: 50px;
 
         padding: 0 20px;
+
     }
 
+
     .nav-link {
+
         font-size: 12px;
+
         letter-spacing: 1.5px;
 
         white-space: nowrap;
+
     }
 
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
     .navbar {
+
         height: 125px;
+
+        transition:
+            height 0.25s ease;
+
     }
 
+
     .nav-top {
+
         height: 85px;
+
+        transition:
+            height 0.25s ease;
+
     }
 
 
     /* LOGO */
 
     .logo {
+
         font-size: 38px;
+
     }
 
 
     /* SEARCH ICON */
 
     .nav-search {
+
         left: 5%;
 
         width: 27px;
+
         height: 27px;
+
     }
 
+
     .nav-search svg {
+
         width: 22px;
+
         height: 22px;
+
     }
 
 
     /* SOCIAL MEDIA */
 
     .nav-socials {
+
         right: 5%;
+
         gap: 8px;
+
     }
+
 
     .nav-socials a {
+
         width: 22px;
+
         height: 22px;
+
     }
 
+
     .nav-socials svg {
+
         width: 19px;
+
         height: 19px;
+
     }
 
 
     /* SEARCH BOX */
 
     .search-box {
-        left: 50%;
-        top: 88px;
 
-        transform: translateX(-50%);
-
-        width: 82%;
-        max-width: 300px;
-    }
-
-    .search-box input {
-        font-size: 10px;
-        padding: 6px 0;
-    }
-
-
-    /* MOVE NAVIGATION DOWN WHEN SEARCH IS OPEN */
-
-    .nav-top:has(.search-box.active) {
-        height: 125px;
-    }
-
-    .navbar:has(.search-box.active) {
-        height: 165px;
-    }
-
-
-    /* NAVIGATION MENU */
-
-    .nav-menu {
-        height: 40px;
-
-        gap: 24px;
-
-        padding: 0 20px;
-    }
-
-    .nav-link {
-        font-size: 10px;
-        letter-spacing: 1px;
-
-        white-space: nowrap;
-    }
-
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media (max-width: 400px) {
-
-    .navbar {
-        height: 120px;
-    }
-
-    .nav-top {
-        height: 82px;
-    }
-
-
-    /* LOGO */
-
-    .logo {
-        font-size: 34px;
-    }
-
-
-    /* SEARCH ICON */
-
-    .nav-search {
-        left: 4%;
-
-        width: 25px;
-        height: 25px;
-    }
-
-    .nav-search svg {
-        width: 20px;
-        height: 20px;
-    }
-
-
-    /* SOCIAL MEDIA */
-
-    .nav-socials {
-        right: 4%;
-        gap: 6px;
-    }
-
-    .nav-socials a {
-        width: 20px;
-        height: 20px;
-    }
-
-    .nav-socials svg {
-        width: 18px;
-        height: 18px;
-    }
-
-
-    /* SEARCH BOX */
-
-    .search-box {
-        top: 85px;
-
-        width: 80%;
-        max-width: 270px;
-    }
-
-    .search-box input {
-        font-size: 9px;
-        padding: 5px 0;
-    }
-
-
-    /* MOVE NAVIGATION DOWN WHEN SEARCH IS OPEN */
-
-    .nav-top:has(.search-box.active) {
-        height: 118px;
-    }
-
-    .navbar:has(.search-box.active) {
-        height: 156px;
-    }
-
-
-    /* NAVIGATION MENU */
-
-    .nav-menu {
-        height: 38px;
-
-        gap: 17px;
-
-        padding: 0 15px;
-    }
-
-    .nav-link {
-        font-size: 9px;
-        letter-spacing: 0.8px;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .navbar {
-        height: 125px;
-
-        transition: height 0.25s ease;
-    }
-
-    .nav-top {
-        height: 85px;
-
-        transition: height 0.25s ease;
-    }
-
-    /* =====================================================
-       LOGO
-    ===================================================== */
-
-    .logo {
-        font-size: 38px;
-    }
-
-
-    /* =====================================================
-       SEARCH ICON
-    ===================================================== */
-
-    .nav-search {
-        left: 5%;
-
-        width: 27px;
-        height: 27px;
-    }
-
-    .nav-search svg {
-        width: 22px;
-        height: 22px;
-    }
-
-
-    /* =====================================================
-       SOCIAL MEDIA
-    ===================================================== */
-
-    .nav-socials {
-        right: 5%;
-
-        gap: 8px;
-    }
-
-    .nav-socials a {
-        width: 22px;
-        height: 22px;
-    }
-
-    .nav-socials svg {
-        width: 19px;
-        height: 19px;
-    }
-
-
-    /* =====================================================
-       SEARCH BOX
-       Separate row below the logo
-    ===================================================== */
-
-    .search-box {
         position: absolute;
 
         left: 50%;
+
         top: 88px;
 
         transform: translateX(-50%);
 
         width: 82%;
+
         max-width: 300px;
 
         opacity: 0;
+
         visibility: hidden;
 
         transition:
             opacity 0.25s ease,
             visibility 0.25s ease;
+
     }
+
 
     .search-box.active {
+
         opacity: 1;
+
         visibility: visible;
+
     }
 
+
     .search-box input {
+
         width: 100%;
 
         padding: 6px 0;
 
         font-size: 10px;
+
         letter-spacing: 1px;
 
         text-align: left;
+
     }
 
 
-    /* =====================================================
-       MOVE NAVIGATION DOWN WHEN SEARCH IS OPEN
-    ===================================================== */
+    /* MOVE NAVIGATION DOWN WHEN SEARCH IS OPEN */
 
     .nav-top:has(.search-box.active) {
+
         height: 125px;
+
     }
+
 
     .navbar:has(.search-box.active) {
+
         height: 165px;
+
     }
 
 
-    /* =====================================================
-       NAVIGATION MENU
-    ===================================================== */
+    /* NAVIGATION MENU */
 
     .nav-menu {
+
         height: 40px;
 
         gap: 24px;
 
         padding: 0 20px;
+
     }
 
+
     .nav-link {
+
         font-size: 10px;
 
         letter-spacing: 1px;
 
         white-space: nowrap;
+
     }
 
 }
 
 
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
+/* VERY SMALL PHONES */
 
 @media (max-width: 400px) {
 
     .navbar {
+
         height: 120px;
+
     }
+
 
     .nav-top {
+
         height: 82px;
+
     }
 
 
-    /* =====================================================
-       LOGO
-    ===================================================== */
+    /* LOGO */
 
     .logo {
+
         font-size: 34px;
+
     }
 
 
-    /* =====================================================
-       SEARCH ICON
-    ===================================================== */
+    /* SEARCH ICON */
 
     .nav-search {
+
         left: 4%;
 
         width: 25px;
+
         height: 25px;
+
     }
+
 
     .nav-search svg {
+
         width: 20px;
+
         height: 20px;
+
     }
 
 
-    /* =====================================================
-       SOCIAL MEDIA
-    ===================================================== */
+    /* SOCIAL MEDIA */
 
     .nav-socials {
+
         right: 4%;
 
         gap: 6px;
+
     }
+
 
     .nav-socials a {
+
         width: 20px;
+
         height: 20px;
+
     }
+
 
     .nav-socials svg {
+
         width: 18px;
+
         height: 18px;
+
     }
 
 
-    /* =====================================================
-       SEARCH BOX
-    ===================================================== */
+    /* SEARCH BOX */
 
     .search-box {
+
         top: 85px;
 
         width: 80%;
+
         max-width: 270px;
+
     }
 
+
     .search-box input {
+
         font-size: 9px;
 
         padding: 5px 0;
+
     }
 
 
-    /* =====================================================
-       MOVE NAV DOWN WHEN SEARCH IS OPEN
-    ===================================================== */
+    /* MOVE NAVIGATION DOWN WHEN SEARCH IS OPEN */
 
     .nav-top:has(.search-box.active) {
+
         height: 118px;
+
     }
+
 
     .navbar:has(.search-box.active) {
+
         height: 156px;
+
     }
 
 
-    /* =====================================================
-       NAVIGATION MENU
-    ===================================================== */
+    /* NAVIGATION MENU */
 
     .nav-menu {
+
         height: 38px;
 
         gap: 17px;
 
         padding: 0 15px;
+
     }
 
+
     .nav-link {
+
         font-size: 9px;
 
         letter-spacing: 0.8px;
+
     }
 
 }

@@ -1,12 +1,6 @@
-/* =========================================================
-   FLORENCE PERFUME PH
-   HOME PAGE - CAROUSELS
-========================================================= */
+// MAIN JAVASCRIPT
 
-
-/* =========================================================
-   BEST SELLER - INFINITE SWIPE CAROUSEL
-========================================================= */
+// FEATURED FLORENCE SCENTS CAROUSEL
 
 const bestSellerViewport =
     document.querySelector(".best-seller-viewport");
@@ -31,72 +25,99 @@ if (
     bestSellerItems.length > 0
 ) {
 
+    let singleSetWidth = 0;
+    let carouselReady = false;
+    let resizeTimer;
 
-    /* =====================================================
-       CREATE COPIES FOR INFINITE LOOP
-    ===================================================== */
 
-    bestSellerItems.forEach((item) => {
+    // CREATE CAROUSEL COPIES
+    // Creates one copy before and after the original products.
 
-        bestSellerTrack.appendChild(
+    const originalItems =
+        bestSellerItems.map((item) =>
             item.cloneNode(true)
         );
 
-    });
 
+    const beforeFragment =
+        document.createDocumentFragment();
 
-    bestSellerItems
+    originalItems
         .slice()
         .reverse()
         .forEach((item) => {
 
-            bestSellerTrack.insertBefore(
-                item.cloneNode(true),
-                bestSellerTrack.firstChild
-            );
+            beforeFragment.appendChild(item);
 
         });
 
 
-    let singleSetWidth = 0;
+    bestSellerTrack.insertBefore(
+        beforeFragment,
+        bestSellerTrack.firstChild
+    );
 
 
-    /* =====================================================
-       CALCULATE WIDTH OF ONE COMPLETE SET
-    ===================================================== */
+    const afterFragment =
+        document.createDocumentFragment();
+
+    originalItems.forEach((item) => {
+
+        afterFragment.appendChild(item);
+
+    });
+
+
+    bestSellerTrack.appendChild(
+        afterFragment
+    );
+
+
+    // CALCULATE CAROUSEL WIDTH
+    // One complete set is the width of all original products.
 
     function calculateBestSellerWidth() {
 
-        const allItems =
-            bestSellerTrack.querySelectorAll(
-                ".best-seller-item"
-            );
-
-
-        singleSetWidth = 0;
-
-
-        for (
-            let i = 0;
-            i < bestSellerItems.length;
-            i++
+        if (
+            bestSellerTrack.scrollWidth === 0
         ) {
 
-            singleSetWidth +=
-                allItems[i]
-                    .getBoundingClientRect()
-                    .width;
+            return;
 
         }
 
 
-        /*
-            Start at the middle copy.
-            This allows scrolling in both directions.
-        */
+        singleSetWidth =
+            bestSellerTrack.scrollWidth / 3;
+
+    }
+
+
+    // SET INITIAL POSITION
+    // Starts on the middle copy of the products.
+
+    function initializeBestSeller() {
+
+        calculateBestSellerWidth();
+
+
+        if (
+            singleSetWidth <= 0
+        ) {
+
+            return;
+
+        }
+
+
+        carouselReady = false;
+
 
         bestSellerViewport.scrollLeft =
             singleSetWidth;
+
+
+        carouselReady = true;
 
 
         updateBestSellerDots();
@@ -104,58 +125,53 @@ if (
     }
 
 
-    /* =====================================================
-       UPDATE DOT / CURRENT FOCUS
-    ===================================================== */
+    // UPDATE DOTS
+    // Six products are represented by three indicators.
 
     function updateBestSellerDots() {
 
-        if (singleSetWidth === 0) {
+        if (
+            bestSellerDots.length === 0 ||
+            singleSetWidth <= 0
+        ) {
+
             return;
+
         }
 
 
-        const itemWidth =
-            bestSellerItems[0]
-                .getBoundingClientRect()
-                .width;
-
-
-/*
-    Find the current product position
-    inside the original 6 products.
-*/
-
-        const scrollInsideSet =
-            bestSellerViewport.scrollLeft -
-            singleSetWidth;
-
-
-        let currentItem =
-            Math.round(
-                scrollInsideSet / itemWidth
+        const positionInsideSet =
+            (
+                bestSellerViewport.scrollLeft -
+                singleSetWidth
             );
 
 
-/*
-    Keep the index between 0 and 5.
-*/
+        const itemWidth =
+            singleSetWidth /
+            bestSellerItems.length;
 
-        currentItem =
+
+        let currentProduct =
+            Math.round(
+                positionInsideSet /
+                itemWidth
+            );
+
+
+        currentProduct =
             (
-                currentItem %
+                currentProduct %
                 bestSellerItems.length +
                 bestSellerItems.length
             ) %
             bestSellerItems.length;
 
-/*
-    6 products = 3 indicators.
-    Each indicator represents 2 products.
-*/
 
         const activeDot =
-            Math.floor(currentItem / 2);
+            Math.floor(
+                currentProduct / 2
+            );
 
 
         bestSellerDots.forEach(
@@ -172,46 +188,52 @@ if (
     }
 
 
-    /* =====================================================
-       INFINITE SWIPE
-    ===================================================== */
+    // INFINITE SWIPE
+    // Moves the carousel back to the middle copy when needed.
 
     bestSellerViewport.addEventListener(
         "scroll",
         function () {
 
-            if (singleSetWidth === 0) {
+            if (
+                !carouselReady ||
+                singleSetWidth <= 0
+            ) {
+
                 return;
+
             }
 
-
-            /*
-                Reached the right copy.
-                Move silently back to the middle.
-            */
 
             if (
                 bestSellerViewport.scrollLeft >=
                 singleSetWidth * 2
             ) {
 
+                carouselReady = false;
+
+
                 bestSellerViewport.scrollLeft -=
                     singleSetWidth;
+
+
+                carouselReady = true;
 
             }
 
 
-            /*
-                Reached the left copy.
-                Move silently forward to the middle.
-            */
-
-            if (
+            else if (
                 bestSellerViewport.scrollLeft <= 0
             ) {
 
+                carouselReady = false;
+
+
                 bestSellerViewport.scrollLeft +=
                     singleSetWidth;
+
+
+                carouselReady = true;
 
             }
 
@@ -222,26 +244,109 @@ if (
     );
 
 
-    /* =====================================================
-       INITIALIZE
-    ===================================================== */
+    // INITIALIZE AFTER PAGE LOAD
 
     window.addEventListener(
         "load",
-        calculateBestSellerWidth
+        function () {
+
+            setTimeout(
+                initializeBestSeller,
+                100
+            );
+
+        }
     );
 
 
+    // HANDLE RESIZE
+    // Recalculates the carousel without adding new copies.
+
     window.addEventListener(
         "resize",
-        calculateBestSellerWidth
+        function () {
+
+            clearTimeout(
+                resizeTimer
+            );
+
+
+            resizeTimer =
+                setTimeout(
+                    function () {
+
+                        if (
+                            !carouselReady
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        const oldWidth =
+                            singleSetWidth;
+
+
+                        if (
+                            oldWidth <= 0
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        const oldScroll =
+                            bestSellerViewport.scrollLeft;
+
+
+                        const positionInsideSet =
+                            (
+                                oldScroll -
+                                oldWidth
+                            );
+
+
+                        const ratio =
+                            positionInsideSet /
+                            oldWidth;
+
+
+                        calculateBestSellerWidth();
+
+
+                        const newPosition =
+                            singleSetWidth +
+                            (
+                                ratio *
+                                singleSetWidth
+                            );
+
+
+                        carouselReady = false;
+
+
+                        bestSellerViewport.scrollLeft =
+                            newPosition;
+
+
+                        carouselReady = true;
+
+
+                        updateBestSellerDots();
+
+                    },
+                    150
+                );
+
+        }
     );
 
 }
 
-/* =========================================================
-   COLLECTION - INFINITE SWIPE CAROUSEL
-========================================================= */
+
+// EXPLORE FLORENCE FRAGRANCES CAROUSEL
 
 const collectionViewport =
     document.querySelector(".collection-viewport");
@@ -261,138 +366,149 @@ if (
     collectionCards.length > 0
 ) {
 
+    let singleCollectionWidth = 0;
+    let collectionReady = false;
+    let collectionResizeTimer;
 
-    /* =====================================================
-       CREATE COPIES FOR INFINITE LOOP
-    ===================================================== */
 
-    collectionCards.forEach((card) => {
+    // CREATE CAROUSEL COPIES
+    // Creates one copy before and after the original cards.
 
-        collectionTrack.appendChild(
+    const originalCards =
+        collectionCards.map((card) =>
             card.cloneNode(true)
         );
 
-    });
 
+    const collectionBefore =
+        document.createDocumentFragment();
 
-    collectionCards
+    originalCards
         .slice()
         .reverse()
         .forEach((card) => {
 
-            collectionTrack.insertBefore(
-                card.cloneNode(true),
-                collectionTrack.firstChild
-            );
+            collectionBefore.appendChild(card);
 
         });
 
 
-    let singleCollectionWidth = 0;
+    collectionTrack.insertBefore(
+        collectionBefore,
+        collectionTrack.firstChild
+    );
 
 
-    /* =====================================================
-       CALCULATE WIDTH OF ONE COMPLETE SET
-    ===================================================== */
+    const collectionAfter =
+        document.createDocumentFragment();
+
+    originalCards.forEach((card) => {
+
+        collectionAfter.appendChild(card);
+
+    });
+
+
+    collectionTrack.appendChild(
+        collectionAfter
+    );
+
+
+    // CALCULATE COLLECTION WIDTH
+    // Measures one complete set of collection cards.
 
     function calculateCollectionWidth() {
 
-        const allCards =
-            collectionTrack.querySelectorAll(
-                ".collection-card"
-            );
-
-
-        singleCollectionWidth = 0;
-
-
-        for (
-            let i = 0;
-            i < collectionCards.length;
-            i++
+        if (
+            collectionTrack.scrollWidth === 0
         ) {
 
-            singleCollectionWidth +=
-                allCards[i]
-                    .getBoundingClientRect()
-                    .width;
+            return;
 
         }
 
 
-        /*
-            Add the margin between cards.
-        */
-
-        const cardStyle =
-            window.getComputedStyle(
-                allCards[0]
-            );
-
-
-        const marginRight =
-            parseFloat(
-                cardStyle.marginRight
-            ) || 0;
-
-
-        singleCollectionWidth +=
-            marginRight *
-            collectionCards.length;
-
-
-        /*
-            Start at the middle copy.
-        */
-
-        collectionViewport.scrollLeft =
-            singleCollectionWidth;
+        singleCollectionWidth =
+            collectionTrack.scrollWidth / 3;
 
     }
 
 
-    /* =====================================================
-       INFINITE SWIPE
-    ===================================================== */
+    // INITIALIZE COLLECTION
+    // Starts on the middle copy.
+
+    function initializeCollection() {
+
+        calculateCollectionWidth();
+
+
+        if (
+            singleCollectionWidth <= 0
+        ) {
+
+            return;
+
+        }
+
+
+        collectionReady = false;
+
+
+        collectionViewport.scrollLeft =
+            singleCollectionWidth;
+
+
+        collectionReady = true;
+
+    }
+
+
+    // INFINITE SWIPE
+    // Keeps the collection carousel looping.
 
     collectionViewport.addEventListener(
         "scroll",
         function () {
 
             if (
-                singleCollectionWidth === 0
+                !collectionReady ||
+                singleCollectionWidth <= 0
             ) {
+
                 return;
+
             }
 
-
-            /*
-                Reached the right copy.
-                Move silently back to the middle.
-            */
 
             if (
                 collectionViewport.scrollLeft >=
                 singleCollectionWidth * 2
             ) {
 
+                collectionReady = false;
+
+
                 collectionViewport.scrollLeft -=
                     singleCollectionWidth;
+
+
+                collectionReady = true;
 
             }
 
 
-            /*
-                Reached the left copy.
-                Move silently forward to the middle.
-            */
-
-            if (
+            else if (
                 collectionViewport.scrollLeft <= 0
             ) {
 
+                collectionReady = false;
+
+
                 collectionViewport.scrollLeft +=
                     singleCollectionWidth;
+
+
+                collectionReady = true;
 
             }
 
@@ -400,26 +516,106 @@ if (
     );
 
 
-    /* =====================================================
-       INITIALIZE
-    ===================================================== */
+    // INITIALIZE AFTER PAGE LOAD
 
     window.addEventListener(
         "load",
-        calculateCollectionWidth
+        function () {
+
+            setTimeout(
+                initializeCollection,
+                100
+            );
+
+        }
     );
 
 
+    // HANDLE RESIZE
+    // Keeps the same relative position after resizing.
+
     window.addEventListener(
         "resize",
-        calculateCollectionWidth
+        function () {
+
+            clearTimeout(
+                collectionResizeTimer
+            );
+
+
+            collectionResizeTimer =
+                setTimeout(
+                    function () {
+
+                        if (
+                            !collectionReady
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        const oldWidth =
+                            singleCollectionWidth;
+
+
+                        if (
+                            oldWidth <= 0
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        const oldScroll =
+                            collectionViewport.scrollLeft;
+
+
+                        const positionInsideSet =
+                            (
+                                oldScroll -
+                                oldWidth
+                            );
+
+
+                        const ratio =
+                            positionInsideSet /
+                            oldWidth;
+
+
+                        calculateCollectionWidth();
+
+
+                        const newPosition =
+                            singleCollectionWidth +
+                            (
+                                ratio *
+                                singleCollectionWidth
+                            );
+
+
+                        collectionReady = false;
+
+
+                        collectionViewport.scrollLeft =
+                            newPosition;
+
+
+                        collectionReady = true;
+
+                    },
+                    150
+                );
+
+        }
     );
 
 }
 
-/* =========================================================
-   SEARCH
-========================================================= */
+
+// SEARCH
 
 const searchButton =
     document.getElementById("searchButton");
@@ -437,22 +633,29 @@ if (
     searchInput
 ) {
 
-    /* OPEN / CLOSE SEARCH */
+
+    // OPEN / CLOSE SEARCH
 
     searchButton.addEventListener(
         "click",
         function () {
 
-            searchBox.classList.toggle("active");
+            searchBox.classList.toggle(
+                "active"
+            );
 
 
             if (
-                searchBox.classList.contains("active")
+                searchBox.classList.contains(
+                    "active"
+                )
             ) {
 
                 searchInput.focus();
 
-            } else {
+            }
+
+            else {
 
                 searchInput.value = "";
 
@@ -462,14 +665,18 @@ if (
     );
 
 
-    /* SEARCH */
+    // SEARCH ON ENTER
 
     searchInput.addEventListener(
         "keydown",
         function (event) {
 
-            if (event.key !== "Enter") {
+            if (
+                event.key !== "Enter"
+            ) {
+
                 return;
+
             }
 
 
@@ -477,31 +684,34 @@ if (
                 searchInput.value.trim();
 
 
-            if (searchTerm === "") {
+            if (
+                searchTerm === ""
+            ) {
+
                 return;
+
             }
 
 
-            /*
-                Send the search term to
-                the Collection page.
-            */
-
             window.location.href =
                 "collection.html?search=" +
-                encodeURIComponent(searchTerm);
+                encodeURIComponent(
+                    searchTerm
+                );
 
         }
     );
 
 
-    /* CLOSE WITH ESC */
+    // CLOSE SEARCH WITH ESC
 
     searchInput.addEventListener(
         "keydown",
         function (event) {
 
-            if (event.key === "Escape") {
+            if (
+                event.key === "Escape"
+            ) {
 
                 searchBox.classList.remove(
                     "active"

@@ -1,9 +1,7 @@
-/* =========================================================
-   FLORENCE PERFUME PH
-   FOOTER
-========================================================= */
+/* FOOTER */
 
 .footer {
+
     position: relative;
 
     width: 100%;
@@ -18,14 +16,14 @@
     border-top: 1px solid rgba(180, 180, 180, 0.25);
 
     color: #222222;
+
 }
 
 
-/* =========================================================
-   MAIN FOOTER
-========================================================= */
+/* MAIN FOOTER */
 
 .footer-container {
+
     width: 100%;
 
     max-width: 1400px;
@@ -40,18 +38,21 @@
         1fr 1fr 1fr;
 
     align-items: center;
+
 }
 
 
-/* =========================================================
-   BRAND
-========================================================= */
+/* BRAND */
 
 .footer-brand {
+
     text-align: left;
+
 }
 
+
 .footer-logo {
+
     display: inline-block;
 
     font-family:
@@ -73,14 +74,12 @@
 
     transition:
         opacity 0.25s ease;
-}
 
-.footer-logo:hover {
-    opacity: 0.6;
 }
 
 
 .footer-tagline {
+
     margin: 12px 0 0;
 
     font-family:
@@ -95,14 +94,14 @@
     letter-spacing: 1.5px;
 
     color: #777777;
+
 }
 
 
-/* =========================================================
-   FOOTER NAVIGATION
-========================================================= */
+/* FOOTER NAVIGATION */
 
 .footer-nav {
+
     display: flex;
 
     justify-content: center;
@@ -110,9 +109,12 @@
     align-items: center;
 
     gap: 30px;
+
 }
 
+
 .footer-nav a {
+
     font-family:
         "Montserrat",
         Arial,
@@ -130,17 +132,21 @@
 
     transition:
         opacity 0.25s ease;
+
 }
+
 
 .footer-nav a:hover {
+
     opacity: 0.5;
+
 }
 
-/* =========================================================
-   SOCIAL MEDIA
-========================================================= */
+
+/* SOCIAL MEDIA */
 
 .footer-socials {
+
     display: flex;
 
     justify-content: flex-end;
@@ -148,16 +154,20 @@
     align-items: center;
 
     gap: 18px;
+
 }
 
 
 .footer-socials a {
+
     width: 25px;
+
     height: 25px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     color: #222222;
@@ -167,34 +177,38 @@
     transition:
         transform 0.25s ease,
         opacity 0.25s ease;
+
 }
 
 
-/* General SVG */
+/* SOCIAL MEDIA ICONS */
 
 .footer-socials svg {
+
     width: 21px;
+
     height: 21px;
 
     display: block;
+
 }
 
 
-/* =========================================================
-   FACEBOOK
-========================================================= */
+/* FACEBOOK */
 
 .footer-socials a[aria-label="Facebook"] svg {
+
     fill: currentColor;
+
     stroke: none;
+
 }
 
 
-/* =========================================================
-   INSTAGRAM
-========================================================= */
+/* INSTAGRAM */
 
 .footer-socials a[aria-label="Instagram"] svg {
+
     fill: none;
 
     stroke: currentColor;
@@ -202,24 +216,26 @@
     stroke-width: 1.6;
 
     stroke-linecap: round;
+
 }
 
 
-/* Hover */
+/* SOCIAL MEDIA HOVER */
 
 .footer-socials a:hover {
+
     opacity: 0.5;
 
     transform:
         translateY(-2px);
+
 }
 
 
-/* =========================================================
-   COPYRIGHT
-========================================================= */
+/* COPYRIGHT */
 
 .footer-bottom {
+
     width: 100%;
 
     padding: 16px 6% 20px;
@@ -228,9 +244,12 @@
         1px solid rgba(180, 180, 180, 0.25);
 
     text-align: center;
+
 }
 
+
 .footer-bottom p {
+
     margin: 0;
 
     font-family:
@@ -245,66 +264,90 @@
     letter-spacing: 1px;
 
     color: #777777;
+
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
+/* TABLET */
 
 @media (max-width: 900px) {
 
     .footer-container {
+
         grid-template-columns: 1fr;
 
         gap: 30px;
 
         text-align: center;
+
     }
+
 
     .footer-brand {
+
         text-align: center;
+
     }
+
 
     .footer-nav {
+
         gap: 25px;
+
     }
 
+
     .footer-socials {
+
         justify-content: center;
+
     }
+
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
     .footer-container {
+
         padding: 45px 7% 35px;
 
         gap: 25px;
+
     }
+
 
     .footer-logo {
+
         font-size: 38px;
+
     }
 
+
     .footer-nav {
+
         flex-wrap: wrap;
 
         gap: 15px 22px;
+
     }
+
 
     .footer-nav a {
+
         font-size: 10px;
+
     }
 
+
     .footer-bottom {
+
         padding-left: 7%;
+
         padding-right: 7%;
+
     }
 
 }

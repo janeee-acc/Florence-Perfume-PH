@@ -1,59 +1,68 @@
-/* =========================================================
-   FLORENCE PERFUME PH
-   DELIVERY / SHOP PAGE
-   Consistent with Home Page
-========================================================= */
+/* STORES PAGE */
 
 
-/* =========================================================
-   GLOBAL
-========================================================= */
+/* GLOBAL */
 
 *,
 *::before,
 *::after {
+
     box-sizing: border-box;
+
 }
+
 
 html {
+
     width: 100%;
+
     max-width: 100%;
+
     overflow-x: hidden;
+
 }
+
 
 body {
+
     width: 100%;
+
     max-width: 100%;
+
     margin: 0;
+
     padding: 0;
+
     overflow-x: hidden;
+
 }
 
 
-/* =========================================================
-   HERO
-========================================================= */
+/* HERO */
 
 .delivery-hero {
+
     position: relative;
 
     width: 100%;
-    max-width: 100%;
 
-    height: 570px;
+    height: 600px;
 
     overflow: hidden;
 
-    background: #000000;
+    background-color: #000000;
+
 }
 
 
-/* Atmospheric light */
+/* HERO LIGHT */
 
 .delivery-hero::before {
+
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     z-index: 1;
@@ -66,20 +75,24 @@ body {
         );
 
     pointer-events: none;
+
 }
 
 
-/* Bottom mist */
+/* HERO BOTTOM MIST */
 
 .delivery-hero::after {
+
     content: "";
 
     position: absolute;
 
     left: 50%;
+
     bottom: -100px;
 
     width: 85%;
+
     max-width: 1200px;
 
     height: 180px;
@@ -96,29 +109,35 @@ body {
     pointer-events: none;
 
     z-index: 2;
+
 }
 
 
-/* Hero image */
+/* HERO IMAGE */
 
 .delivery-hero-image {
+
     display: block;
 
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
+
     object-position: center;
+
 }
 
-/* =========================================================
-   SHOP / CHECKOUT SECTION
-========================================================= */
+
+/* SHOP / CHECKOUT SECTION */
 
 .checkout-section {
+
     position: relative;
 
     width: 100%;
+
     max-width: 100%;
 
     padding:
@@ -141,20 +160,24 @@ body {
             #FAFBFA 48%,
             #FFFFFF 100%
         );
+
 }
 
 
-/* Left mist */
+/* LEFT MIST */
 
 .checkout-section::before {
+
     content: "";
 
     position: absolute;
 
     left: -180px;
+
     top: 160px;
 
     width: 430px;
+
     height: 210px;
 
     background:
@@ -167,20 +190,24 @@ body {
     pointer-events: none;
 
     z-index: 0;
+
 }
 
 
-/* Right mist */
+/* RIGHT MIST */
 
 .checkout-section::after {
+
     content: "";
 
     position: absolute;
 
     right: -180px;
+
     bottom: -70px;
 
     width: 80%;
+
     max-width: 1000px;
 
     height: 150px;
@@ -195,28 +222,31 @@ body {
     pointer-events: none;
 
     z-index: 0;
+
 }
 
 
-/* =========================================================
-   SECTION TITLE
-========================================================= */
+/* SECTION TITLE */
 
 .delivery-section-title {
+
     position: relative;
 
     z-index: 2;
 
     width: 100%;
+
     max-width: 850px;
 
     margin: 0 auto;
 
     text-align: center;
+
 }
 
 
 .delivery-section-title .section-eyebrow {
+
     margin:
         0
         0
@@ -234,10 +264,12 @@ body {
     letter-spacing: 4px;
 
     color: #8B6335;
+
 }
 
 
 .delivery-section-title h2 {
+
     margin: 0;
 
     font-family:
@@ -259,11 +291,14 @@ body {
     letter-spacing: 6px;
 
     color: #222222;
+
 }
 
 
 .delivery-section-title .section-subtitle {
+
     width: 100%;
+
     max-width: 650px;
 
     margin:
@@ -285,11 +320,14 @@ body {
     letter-spacing: 1.2px;
 
     color: #777777;
+
 }
 
 
 .delivery-section-title .title-line {
+
     width: 55px;
+
     height: 1px;
 
     margin:
@@ -299,19 +337,42 @@ body {
 
     background-color:
         #8D8173;
+
 }
 
 
-/* =========================================================
-   SHOPPING PLATFORMS
-========================================================= */
+/* SHOP MESSAGE */
+
+.shop-cta {
+
+    margin-top: 70px;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    color: #777777;
+
+}
+
+
+/* SHOPPING PLATFORMS */
 
 .shopping-platforms {
+
     position: relative;
 
     z-index: 2;
 
     width: 100%;
+
     max-width: 1050px;
 
     margin:
@@ -325,15 +386,18 @@ body {
         repeat(3, minmax(0, 1fr));
 
     gap: 25px;
+
 }
 
 
-/* Individual card */
+/* SHOPPING PLATFORM CARD */
 
 .shopping-platform {
+
     position: relative;
 
     min-width: 0;
+
     width: 100%;
 
     padding:
@@ -368,10 +432,12 @@ body {
         transform 0.45s ease,
         background-color 0.45s ease,
         box-shadow 0.45s ease;
+
 }
 
 
 .shopping-platform:hover {
+
     transform:
         translateY(-8px);
 
@@ -381,15 +447,16 @@ body {
     box-shadow:
         0 18px 35px
         rgba(90, 90, 90, 0.08);
+
 }
 
 
-/* =========================================================
-   PLATFORM IMAGE
-========================================================= */
+/* PLATFORM IMAGE */
 
 .platform-image {
+
     width: 180px;
+
     height: 150px;
 
     max-width: 100%;
@@ -397,35 +464,43 @@ body {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     overflow: hidden;
+
 }
 
 
 .shopping-platform img {
+
     display: block;
 
     width: 100%;
+
     height: 100%;
 
     object-fit: contain;
 
     transition:
         transform 0.5s ease;
+
 }
 
 
 .shopping-platform:hover img {
+
     transform:
         translateY(-5px)
         scale(1.02);
+
 }
 
 
-/* Shop Now */
+/* SHOP NOW */
 
 .shopping-platform p {
+
     margin:
         10px
         0
@@ -443,14 +518,14 @@ body {
     letter-spacing: 2.5px;
 
     color: #8D8173;
+
 }
 
 
-/* =========================================================
-   BACK TO COLLECTION
-========================================================= */
+/* BACK TO COLLECTION */
 
 .back-to-collection {
+
     position: relative;
 
     z-index: 2;
@@ -459,7 +534,9 @@ body {
         65px
         auto
         0;
+
     margin-bottom: 20px;
+
     display: flex;
 
     flex-direction: column;
@@ -472,10 +549,12 @@ body {
 
     transition:
         transform 0.3s ease;
+
 }
 
 
 .back-to-collection span {
+
     font-family:
         "Cormorant Garamond",
         Georgia,
@@ -493,11 +572,14 @@ body {
 
     transition:
         color 0.3s ease;
+
 }
 
 
 .back-line {
+
     width: 55px;
+
     height: 1px;
 
     margin-top: 10px;
@@ -507,106 +589,136 @@ body {
 
     transition:
         width 0.35s ease;
+
 }
 
 
 .back-to-collection:hover {
+
     transform:
         translateY(-2px);
+
 }
 
 
 .back-to-collection:hover span {
+
     color:
         #8D8173;
+
 }
 
 
 .back-to-collection:hover .back-line {
+
     width: 80px;
+
 }
 
-.shop-cta {
-    margin-top: 70px;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: #777777;
-}
-/* =========================================================
-   TABLET
-========================================================= */
+
+/* TABLET - 900px */
 
 @media (max-width: 900px) {
 
+
+    /* HERO */
+
     .delivery-hero {
+
         width: 100%;
+
         height: auto;
+
         min-height: 0;
+
         overflow: hidden;
+
         background: #FFFFFF;
+
     }
 
+
     .delivery-hero-image {
+
         display: block;
 
         width: 100%;
+
         height: auto;
 
         min-height: 0;
 
         object-fit: contain;
+
         object-position: center;
 
         max-width: 100%;
+
     }
+
 
     /* CHECKOUT SECTION */
 
     .checkout-section {
+
         padding:
             80px
             6%
             90px;
+
     }
 
 
-    /* TITLE */
+    /* SECTION TITLE */
 
     .delivery-section-title {
+
         max-width: 680px;
+
     }
+
 
     .delivery-section-title h2 {
+
         font-size: 46px;
+
         letter-spacing: 5px;
+
     }
 
+
     .delivery-section-title .section-subtitle {
+
         max-width: 560px;
 
         font-size: 11px;
+
         line-height: 1.8;
+
         letter-spacing: 1px;
+
     }
 
 
     /* SHOP MESSAGE */
 
     .shop-cta {
+
         margin-top: 55px;
 
         text-align: center;
 
         font-size: 9px;
+
         letter-spacing: 1.8px;
+
     }
 
 
     /* STORE CARDS */
 
     .shopping-platforms {
+
         max-width: 700px;
 
         margin-top: 40px;
@@ -615,120 +727,150 @@ body {
             repeat(2, minmax(0, 1fr));
 
         gap: 22px;
+
     }
 
+
     .shopping-platform {
+
         padding:
             22px
             18px
             27px;
+
     }
+
 
     .platform-image {
+
         width: 160px;
+
         height: 135px;
+
     }
 
 
-    /* Center third card */
+    /* CENTER THIRD CARD */
 
     .shopping-platform:last-child {
+
         grid-column: 1 / -1;
 
         width: calc(50% - 11px);
 
         justify-self: center;
+
     }
 
 
     /* BACK TO COLLECTION */
 
     .back-to-collection {
+
         margin-top: 55px;
+
     }
 
+
     .back-to-collection span {
+
         font-size: 24px;
+
     }
+
 
 }
 
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
+/* MOBILE - 600px */
 
 @media (max-width: 600px) {
+
 
     /* HERO */
 
     .delivery-hero {
-        width: 100%;
-        height: auto;
-        min-height: 0;
 
-        overflow: hidden;
+        height: 340px;
+
     }
+
 
     .delivery-hero-image {
-        display: block;
 
         width: 100%;
-        height: auto;
+
+        height: 100%;
 
         min-height: 0;
 
-        object-fit: contain;
+        object-fit: cover;
+
         object-position: center;
+
     }
 
 
-    /* Reduce decorative effects */
-
     .delivery-hero::after {
+
         bottom: -70px;
 
         width: 100%;
+
         height: 130px;
 
         filter: blur(45px);
+
     }
 
 
-    /* CHECKOUT */
+    /* CHECKOUT SECTION */
 
     .checkout-section {
+
         padding:
             65px
             7%
             75px;
+
     }
 
 
-    /* TITLE */
+    /* SECTION TITLE */
 
     .delivery-section-title {
+
         width: 100%;
+
         max-width: 100%;
+
     }
 
+
     .delivery-section-title .section-eyebrow {
+
         margin-bottom: 10px;
 
         font-size: 8px;
+
         letter-spacing: 2.5px;
+
     }
 
+
     .delivery-section-title h2 {
+
         font-size: 38px;
 
         line-height: 1.1;
 
         letter-spacing: 3px;
+
     }
 
+
     .delivery-section-title .section-subtitle {
+
         max-width: 390px;
 
         margin-top: 13px;
@@ -738,18 +880,23 @@ body {
         line-height: 1.8;
 
         letter-spacing: 0.6px;
+
     }
 
+
     .delivery-section-title .title-line {
+
         width: 45px;
 
         margin-top: 14px;
+
     }
 
 
     /* SHOP MESSAGE */
 
     .shop-cta {
+
         margin-top: 45px;
 
         padding: 0 10px;
@@ -761,13 +908,16 @@ body {
         line-height: 1.7;
 
         letter-spacing: 1.5px;
+
     }
 
 
     /* STORE CARDS */
 
     .shopping-platforms {
+
         width: 100%;
+
         max-width: 360px;
 
         margin-top: 30px;
@@ -775,10 +925,14 @@ body {
         grid-template-columns: 1fr;
 
         gap: 18px;
+
     }
 
+
     .shopping-platform {
+
         width: 100%;
+
         max-width: 100%;
 
         margin: 0;
@@ -787,112 +941,135 @@ body {
             20px
             18px
             24px;
+
     }
 
 
-    /* Reset tablet third-card rule */
-
     .shopping-platform:last-child {
+
         grid-column: auto;
 
         width: 100%;
+
     }
 
 
     /* STORE IMAGES */
 
     .platform-image {
+
         width: 150px;
+
         height: 125px;
+
     }
 
+
     .shopping-platform p {
+
         margin-top: 8px;
 
         font-size: 8px;
 
         letter-spacing: 2px;
+
     }
 
 
-    /* Disable hover movement on touch screens */
+    /* DISABLE HOVER ON TOUCH */
 
     .shopping-platform:hover {
+
         transform: none;
+
     }
 
+
     .shopping-platform:hover img {
+
         transform: none;
+
     }
 
 
     /* BACK TO COLLECTION */
 
     .back-to-collection {
+
         margin-top: 50px;
+
         margin-bottom: 10px;
+
     }
 
+
     .back-to-collection span {
+
         font-size: 22px;
 
         letter-spacing: 1.2px;
+
     }
 
+
     .back-line {
+
         width: 45px;
+
     }
+
 
 }
 
 
-
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
+/* VERY SMALL MOBILE - 400px */
 
 @media (max-width: 400px) {
+
 
     /* HERO */
 
     .delivery-hero {
-        width: 100%;
-        height: auto;
-    }
 
-    .delivery-hero-image {
-        width: 100%;
-        height: auto;
+        height: 290px;
 
-        object-fit: contain;
     }
 
 
-    /* CHECKOUT */
+    /* CHECKOUT SECTION */
 
     .checkout-section {
+
         padding:
             55px
             6%
             65px;
+
     }
 
 
-    /* TITLE */
+    /* SECTION TITLE */
 
     .delivery-section-title .section-eyebrow {
+
         font-size: 7px;
 
         letter-spacing: 2px;
+
     }
 
+
     .delivery-section-title h2 {
+
         font-size: 32px;
 
         letter-spacing: 2.5px;
+
     }
 
+
     .delivery-section-title .section-subtitle {
+
         max-width: 310px;
 
         font-size: 9px;
@@ -900,166 +1077,69 @@ body {
         line-height: 1.8;
 
         letter-spacing: 0.5px;
+
     }
 
 
     /* SHOP MESSAGE */
 
     .shop-cta {
+
         margin-top: 40px;
 
         font-size: 7px;
 
         letter-spacing: 1.3px;
+
     }
 
 
     /* STORE CARDS */
 
     .shopping-platforms {
+
         max-width: 300px;
 
         margin-top: 25px;
 
         gap: 16px;
+
     }
 
+
     .shopping-platform {
+
         padding:
             18px
             15px
             22px;
+
     }
 
+
     .platform-image {
+
         width: 135px;
+
         height: 115px;
+
     }
 
 
     /* BACK TO COLLECTION */
 
     .back-to-collection {
+
         margin-top: 45px;
+
     }
 
+
     .back-to-collection span {
+
         font-size: 20px;
+
     }
 
-}
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .delivery-hero {
-        height: 340px;
-    }
-
-    .delivery-hero-image {
-        width: 100%;
-        height: 100%;
-        min-height: 0;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    .checkout-section {
-        padding:
-            65px
-            7%
-            75px;
-    }
-
-    .delivery-section-title h2 {
-        font-size: 38px;
-        letter-spacing: 3px;
-    }
-
-    .delivery-section-title .section-subtitle {
-        max-width: 390px;
-        font-size: 10px;
-        line-height: 1.8;
-        letter-spacing: 0.6px;
-    }
-
-    .shopping-platforms {
-        width: 100%;
-        max-width: 360px;
-        margin-top: 30px;
-
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .shopping-platform {
-        width: 100%;
-        max-width: 100%;
-        padding: 20px 18px 24px;
-    }
-
-    .platform-image {
-        width: 150px;
-        height: 125px;
-    }
-
-    .back-to-collection {
-        margin-top: 50px;
-    }
-
-    .back-to-collection span {
-        font-size: 22px;
-    }
-}
-
-
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
-
-@media (max-width: 400px) {
-
-    .delivery-hero {
-        height: 290px;
-    }
-
-    .checkout-section {
-        padding:
-            55px
-            6%
-            65px;
-    }
-
-    .delivery-section-title h2 {
-        font-size: 32px;
-        letter-spacing: 2.5px;
-    }
-
-    .delivery-section-title .section-subtitle {
-        max-width: 310px;
-        font-size: 9px;
-        line-height: 1.8;
-    }
-
-    .shopping-platforms {
-        max-width: 300px;
-        gap: 16px;
-    }
-
-    .shopping-platform {
-        padding: 18px 15px 22px;
-    }
-
-    .platform-image {
-        width: 135px;
-        height: 115px;
-    }
-
-    .back-to-collection span {
-        font-size: 20px;
-    }
 }

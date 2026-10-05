@@ -1,33 +1,38 @@
-/* =========================================================
-   FLORENCE PERFUME PH
-   COLLECTION PAGE
-========================================================= */
+/* COLLECTION PAGE */
 
 
-/* =========================================================
-   RESET
-========================================================= */
+/* RESET */
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
 
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
 
 html,
 body {
+
     width: 100%;
+
     min-height: 100%;
+
 }
 
 
 body {
+
     font-family: "Montserrat", Arial, sans-serif;
 
     color: #222222;
@@ -37,35 +42,48 @@ body {
     min-height: 100vh;
 
     display: flex;
+
     flex-direction: column;
 
     overflow-x: hidden;
+
 }
 
 
 img {
+
     display: block;
+
     max-width: 100%;
+
 }
 
 
 button {
+
     font-family: inherit;
+
 }
 
 
+/* COLLECTION INTRO */
 
 .collection-intro {
+
     position: relative;
 
     width: 100%;
+
     min-height: 440px;
 
     padding: 100px 20px 90px;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -79,20 +97,24 @@ button {
         );
 
     overflow: hidden;
+
 }
 
 
-/* Soft warm mist on the right */
+/* RIGHT WARM MIST */
 
 .collection-intro::before {
+
     content: "";
 
     position: absolute;
 
     width: 480px;
+
     height: 230px;
 
     top: -80px;
+
     right: -100px;
 
     background: rgba(231, 220, 207, 0.55);
@@ -102,20 +124,24 @@ button {
     filter: blur(65px);
 
     pointer-events: none;
+
 }
 
 
-/* Soft warm mist on the left */
+/* LEFT WARM MIST */
 
 .collection-intro::after {
+
     content: "";
 
     position: absolute;
 
     width: 400px;
+
     height: 180px;
 
     left: -120px;
+
     bottom: -90px;
 
     background: rgba(244, 238, 230, 0.8);
@@ -125,29 +151,39 @@ button {
     filter: blur(60px);
 
     pointer-events: none;
+
 }
 
 
-/* Eyebrow */
+/* INTRO EYEBROW */
 
 .intro-eyebrow {
+
     position: relative;
+
     z-index: 1;
 
     margin-bottom: 16px;
 
     font-family: "Montserrat", Arial, sans-serif;
+
     font-size: 10px;
+
     font-weight: 530;
 
     letter-spacing: 3.5px;
 
     color: #8B6335;
+
 }
 
 
+/* INTRO HEADING */
+
 .collection-intro h1 {
+
     position: relative;
+
     z-index: 1;
 
     margin: 0;
@@ -155,17 +191,24 @@ button {
     font-family: "Cormorant Garamond", Georgia, serif;
 
     font-size: clamp(48px, 5vw, 62px);
+
     font-weight: 400;
 
     letter-spacing: 2px;
+
     line-height: 1.05;
 
     color: #222222;
+
 }
 
 
+/* INTRO DESCRIPTION */
+
 .intro-description {
+
     position: relative;
+
     z-index: 1;
 
     max-width: 600px;
@@ -175,22 +218,22 @@ button {
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: 12px;
+
     font-weight: 300;
 
     line-height: 1.8;
+
     letter-spacing: 1px;
 
     color: #777777;
+
 }
 
 
-
-/* =========================================================
-   COLLECTION PAGE
-   SIDEBAR + PRODUCTS ONLY
-========================================================= */
+/* COLLECTION PAGE */
 
 .collection-page {
+
     position: relative;
 
     width: 100%;
@@ -210,20 +253,24 @@ button {
     padding: 85px 65px 130px;
 
     overflow: hidden;
+
 }
 
 
-/* Soft page atmosphere */
+/* PAGE WARM ATMOSPHERE */
 
 .collection-page::before {
+
     content: "";
 
     position: absolute;
 
     left: -180px;
+
     top: 150px;
 
     width: 430px;
+
     height: 220px;
 
     background: rgba(241, 233, 223, 0.72);
@@ -233,18 +280,22 @@ button {
     filter: blur(60px);
 
     pointer-events: none;
+
 }
 
 
 .collection-page::after {
+
     content: "";
 
     position: absolute;
 
     right: -180px;
+
     bottom: 100px;
 
     width: 430px;
+
     height: 220px;
 
     background: rgba(243, 236, 228, 0.8);
@@ -254,31 +305,36 @@ button {
     filter: blur(60px);
 
     pointer-events: none;
+
 }
 
 
-
-/* =========================================================
-   SIDEBAR
-========================================================= */
+/* SIDEBAR */
 
 .collection-sidebar {
+
     position: relative;
 
     width: 100%;
 
     z-index: 2;
+
 }
 
 
+/* SIDEBAR TITLE */
+
 .collection-sidebar-title {
+
     padding-left: 20px;
 
     margin-bottom: 38px;
+
 }
 
 
 .collection-eyebrow {
+
     margin-bottom: 10px;
 
     font-family: "Montserrat", Arial, sans-serif;
@@ -290,10 +346,12 @@ button {
     letter-spacing: 3px;
 
     color: #8B6335;
+
 }
 
 
 .collection-sidebar h2 {
+
     margin: 0;
 
     font-family: "Cormorant Garamond", Georgia, serif;
@@ -307,10 +365,12 @@ button {
     line-height: 1.1;
 
     color: #222222;
+
 }
 
 
 .collection-line {
+
     width: 42px;
 
     height: 1px;
@@ -318,15 +378,14 @@ button {
     margin-top: 15px;
 
     background-color: #8D8173;
+
 }
 
 
-
-/* =========================================================
-   CATEGORY LIST
-========================================================= */
+/* CATEGORY LIST */
 
 .category-list {
+
     width: 100%;
 
     display: flex;
@@ -336,10 +395,14 @@ button {
     align-items: stretch;
 
     gap: 4px;
+
 }
 
 
+/* CATEGORY BUTTON */
+
 .category {
+
     position: relative;
 
     width: 100%;
@@ -370,35 +433,38 @@ button {
         background-color 0.3s ease,
         color 0.3s ease,
         padding-left 0.3s ease;
+
 }
 
 
-/* Active */
+/* ACTIVE CATEGORY */
 
 .category.active {
+
     background-color: #8B6335;
 
     color: #FFFFFF;
+
 }
 
 
-/* Hover */
+/* CATEGORY HOVER */
 
 .category:not(.active):hover {
+
     background-color: #F5F0EA;
 
     color: #222222;
 
     padding-left: 25px;
+
 }
 
 
-
-/* =========================================================
-   PRODUCTS SECTION
-========================================================= */
+/* PRODUCTS SECTION */
 
 .products-section {
+
     position: relative;
 
     width: 100%;
@@ -408,15 +474,14 @@ button {
     padding: 0 5px;
 
     z-index: 2;
+
 }
 
 
-
-/* =========================================================
-   PRODUCTS GRID
-========================================================= */
+/* PRODUCTS GRID */
 
 .products-grid {
+
     width: 100%;
 
     display: grid;
@@ -429,15 +494,14 @@ button {
     row-gap: 75px;
 
     align-items: start;
+
 }
 
 
-
-/* =========================================================
-   PRODUCT CARD
-========================================================= */
+/* PRODUCT CARD */
 
 .product-card {
+
     position: relative;
 
     width: 100%;
@@ -453,19 +517,23 @@ button {
     transition:
         transform 0.45s ease,
         opacity 0.45s ease;
+
 }
 
 
-/* Product hover */
+/* PRODUCT HOVER */
 
 .product-card:hover {
+
     transform: translateY(-6px);
+
 }
 
 
-/* Product image */
+/* PRODUCT IMAGE */
 
 .product-card img {
+
     width: 100%;
 
     max-width: 500px;
@@ -481,29 +549,37 @@ button {
     transition:
         transform 0.5s ease,
         filter 0.5s ease;
+
 }
 
 
-/* Image hover */
+/* IMAGE HOVER */
 
 .product-card:hover img {
+
     transform: scale(1.025);
 
     filter:
         drop-shadow(
             0 15px 20px rgba(70, 65, 60, 0.1)
         );
+
 }
 
 
-/* Hidden products */
+/* HIDDEN PRODUCTS */
 
 .product-card.hidden {
+
     display: none;
+
 }
 
 
+/* NO SEARCH RESULTS */
+
 .no-results {
+
     grid-column: 1 / -1;
 
     padding: 60px 20px;
@@ -516,93 +592,112 @@ button {
         sans-serif;
 
     font-size: 12px;
+
     font-weight: 300;
 
     letter-spacing: 1px;
 
     color: #777777;
+
 }
-/* =========================================================
-   TABLET
-   1100px
-========================================================= */
+
+
+/* TABLET - 1100px */
 
 @media (max-width: 1100px) {
 
+
     .collection-intro {
+
         min-height: 300px;
 
         padding: 75px 30px 65px;
+
     }
 
 
     .collection-page {
+
         grid-template-columns: 200px 1fr;
 
         column-gap: 45px;
 
         padding: 75px 45px 100px;
+
     }
 
 
     .products-grid {
+
         column-gap: 35px;
 
         row-gap: 60px;
+
     }
 
 
     .product-card img {
+
         max-width: 420px;
+
     }
+
 
 }
 
 
-
-/* =========================================================
-   TABLET / SMALL LAPTOP
-   900px
-========================================================= */
+/* TABLET / SMALL LAPTOP - 900px */
 
 @media (max-width: 900px) {
 
+
     .collection-intro {
+
         min-height: 285px;
 
         padding: 70px 25px 60px;
+
     }
 
 
     .collection-intro h1 {
+
         font-size: 44px;
+
     }
 
 
     .collection-page {
+
         grid-template-columns: 175px 1fr;
 
         column-gap: 35px;
 
         padding: 65px 30px 90px;
+
     }
 
 
-    /* Sidebar */
+    /* SIDEBAR */
 
     .collection-sidebar-title {
+
         padding-left: 10px;
 
         margin-bottom: 30px;
+
     }
 
 
     .collection-sidebar h2 {
+
         font-size: 28px;
+
     }
 
 
     .category {
+
         min-height: 45px;
 
         padding: 0 15px;
@@ -610,57 +705,67 @@ button {
         font-size: 10px;
 
         letter-spacing: 1.7px;
+
     }
 
 
-    /* Products */
+    /* PRODUCTS */
 
     .products-grid {
+
         column-gap: 25px;
 
         row-gap: 50px;
+
     }
 
 
     .product-card img {
+
         max-width: 100%;
+
     }
+
 
 }
 
 
-
-/* =========================================================
-   MOBILE
-   600px
-========================================================= */
+/* MOBILE - 600px */
 
 @media (max-width: 600px) {
 
-    /* Intro */
+
+    /* INTRO */
 
     .collection-intro {
+
         min-height: 270px;
 
         padding: 65px 20px 60px;
+
     }
 
 
     .intro-eyebrow {
+
         font-size: 8px;
 
         letter-spacing: 2.5px;
+
     }
 
 
     .collection-intro h1 {
+
         font-size: 36px;
 
         letter-spacing: 2px;
+
     }
 
 
     .intro-description {
+
         max-width: 340px;
 
         margin-top: 13px;
@@ -670,61 +775,77 @@ button {
         line-height: 1.7;
 
         letter-spacing: 0.8px;
+
     }
 
 
-    /* Collection area */
+    /* COLLECTION AREA */
 
     .collection-page {
+
         display: block;
 
         padding: 60px 20px 80px;
+
     }
 
 
-    /* Sidebar */
+    /* SIDEBAR */
 
     .collection-sidebar {
+
         margin-bottom: 55px;
+
     }
 
 
     .collection-sidebar-title {
+
         padding-left: 5px;
 
         margin-bottom: 25px;
+
     }
 
 
     .collection-eyebrow {
+
         font-size: 8px;
 
         letter-spacing: 2.5px;
+
     }
 
 
     .collection-sidebar h2 {
+
         font-size: 30px;
 
         letter-spacing: 2px;
+
     }
 
 
     .collection-line {
+
         width: 38px;
 
         margin-top: 13px;
+
     }
 
 
-    /* Categories */
+    /* CATEGORIES */
 
     .category-list {
+
         gap: 3px;
+
     }
 
 
     .category {
+
         min-height: 43px;
 
         padding: 0 15px;
@@ -732,103 +853,132 @@ button {
         font-size: 10px;
 
         letter-spacing: 1.8px;
+
     }
 
 
     .category:not(.active):hover {
+
         padding-left: 20px;
+
     }
 
 
-    /* Products */
+    /* PRODUCTS */
 
     .products-section {
+
         padding: 0;
+
     }
 
 
     .products-grid {
+
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
 
         column-gap: 20px;
 
         row-gap: 45px;
+
     }
 
 
     .product-card:hover {
+
         transform: translateY(-4px);
+
     }
 
 
     .product-card img {
+
         width: 100%;
 
         max-width: 100%;
+
     }
+
 
 }
 
 
-
-/* =========================================================
-   VERY SMALL PHONES
-   380px
-========================================================= */
+/* VERY SMALL PHONES - 380px */
 
 @media (max-width: 380px) {
 
+
     .collection-intro {
+
         padding-left: 15px;
+
         padding-right: 15px;
+
     }
 
 
     .collection-intro h1 {
+
         font-size: 32px;
+
     }
 
 
     .intro-description {
+
         font-size: 9.5px;
+
     }
 
 
     .collection-page {
+
         padding:
             55px
             15px
             70px;
+
     }
 
 
     .collection-sidebar {
+
         margin-bottom: 45px;
+
     }
 
 
     .collection-sidebar-title {
+
         padding-left: 0;
+
     }
 
 
     .collection-sidebar h2 {
+
         font-size: 28px;
+
     }
 
 
     .category {
+
         min-height: 42px;
 
         font-size: 9px;
+
     }
 
 
     .products-grid {
+
         column-gap: 15px;
 
         row-gap: 38px;
+
     }
+
 
 }

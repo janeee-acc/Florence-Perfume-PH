@@ -1,62 +1,90 @@
-/* =========================================================
-   FLORENCE PERFUME PH
-   HOME PAGE
-========================================================= */
+/* HOME PAGE */
 
 
-/* =========================================================
-   RESET
-========================================================= */
+/* RESET */
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
+
 
 body {
+
     background-color: #FFFFFF;
+
     color: #111111;
+
     font-family: "Montserrat", Arial, sans-serif;
+
     overflow-x: hidden;
+
 }
+
 
 img {
+
     display: block;
+
     max-width: 100%;
+
 }
 
+
 a {
+
     color: inherit;
+
     text-decoration: none;
+
 }
+
 
 button,
 input {
+
     font-family: inherit;
+
 }
 
 
-/* =========================================================
-   HERO
-========================================================= */
+/* HERO */
 
 .hero {
+
     position: relative;
+
     width: 100%;
+
     height: 600px;
+
     overflow: hidden;
+
     background-color: #000000;
+
 }
 
+
 .hero::before {
+
     content: "";
+
     position: absolute;
+
     inset: 0;
+
     z-index: 1;
 
     background:
@@ -67,229 +95,324 @@ input {
         );
 
     pointer-events: none;
+
 }
 
+
 .hero::after {
+
     content: "";
+
     position: absolute;
+
     left: 50%;
+
     bottom: -100px;
 
     width: 85%;
+
     height: 180px;
 
     transform: translateX(-50%);
 
     background: rgba(255, 255, 255, 0.72);
+
     border-radius: 50%;
+
     filter: blur(55px);
 
     pointer-events: none;
+
     z-index: 2;
+
 }
 
+
 .hero-image {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
+
     object-position: center;
+
 }
 
 
-/* =========================================================
-   GENERAL SECTIONS
-========================================================= */
+/* GENERAL SECTIONS */
 
 .section {
+
     width: 100%;
+
 }
+
 
 .section-title {
+
     text-align: center;
+
 }
+
 
 .section-title h2 {
+
     font-family: "Cormorant Garamond", Georgia, serif;
+
     font-size: clamp(36px, 3.3vw, 48px);
+
     font-weight: 400;
+
     letter-spacing: 7px;
+
 }
 
+
 .title-line {
+
     width: 55px;
+
     height: 1px;
 
     margin: 14px auto 0;
 
     background-color: #8D8173;
+
 }
 
+
 .section-eyebrow {
+
     margin: 0 0 12px;
 
     font-family: "Montserrat", Arial, sans-serif;
+
     font-size: 10px;
+
     font-weight: 530;
+
     letter-spacing: 4px;
 
     color: #8B6335;
+
 }
 
+
 .section-subtitle {
+
     max-width: 450px;
+
     margin: 14px auto 0;
 
     font-family: "Montserrat", Arial, sans-serif;
+
     font-size: 12px;
+
     font-weight: 300;
+
     letter-spacing: 0.8px;
+
     line-height: 1.8;
+
     text-align: center;
 
     color: #777777;
+
 }
 
 
-/* =========================================================
-   BEST SELLERS
-========================================================= */
+/* BEST SELLERS */
 
 .best-seller {
+
     position: relative;
+
     width: 100%;
 
     padding-top: 100px;
+
     padding-bottom: 95px;
 
     overflow: hidden;
 
-background:
-    linear-gradient(
-        180deg,
-        #FFFFFF 0%,
-        #FCFCFB 55%,
-        #F7F3EE 100%
-    );
+    background:
+        linear-gradient(
+            180deg,
+            #FFFFFF 0%,
+            #FCFCFB 55%,
+            #F7F3EE 100%
+        );
+
 }
 
 
-/* Soft atmosphere */
+/* BEST SELLER ATMOSPHERE */
 
 .best-seller::before {
+
     content: "";
 
     position: absolute;
+
     left: -180px;
+
     bottom: 30px;
 
     width: 430px;
+
     height: 190px;
 
     background: rgba(241, 233, 223, 0.8);
 
     border-radius: 50%;
+
     filter: blur(55px);
 
     pointer-events: none;
+
 }
 
+
 .best-seller::after {
+
     content: "";
 
     position: absolute;
+
     right: -180px;
+
     bottom: -80px;
 
     width: 70%;
+
     height: 150px;
 
     background: rgba(243, 236, 228, 0.75);
 
     border-radius: 50%;
+
     filter: blur(55px);
 
     pointer-events: none;
+
 }
 
 
-/* Title */
+/* BEST SELLER TITLE */
 
 .best-seller-title {
+
     position: relative;
+
     z-index: 2;
 
     text-align: center;
+
 }
 
+
 .best-seller-title h2 {
+
     margin: 0;
 
     font-family: "Cormorant Garamond", Georgia, serif;
+
     font-size: clamp(42px, 4vw, 56px);
+
     font-weight: 400;
+
     letter-spacing: 6px;
 
     color: #222222;
+
 }
 
 
-/* Carousel */
+/* BEST SELLER CAROUSEL */
 
 .best-seller-carousel {
+
     position: relative;
+
     width: 100%;
 
     margin-top: 55px;
 
     z-index: 2;
+
 }
 
+
 .best-seller-viewport {
+
     width: 100%;
 
     overflow-x: auto;
+
     overflow-y: hidden;
 
     scroll-behavior: smooth;
+
     scrollbar-width: none;
 
     -webkit-overflow-scrolling: touch;
 
     cursor: grab;
+
 }
+
 
 .best-seller-viewport:active {
+
     cursor: grabbing;
+
 }
+
 
 .best-seller-viewport::-webkit-scrollbar {
+
     display: none;
+
 }
+
 
 .best-seller-track {
+
     display: flex;
+
     width: max-content;
+
 }
 
 
-/* Product items */
+/* BEST SELLER PRODUCTS */
 
 .best-seller-item {
+
     flex: 0 0 25vw;
+
     width: 25vw;
 
     padding: 0 8px;
 
     transition: transform 0.5s ease;
+
 }
+
 
 .best-seller-item:hover {
+
     transform: translateY(-8px);
+
 }
 
+
 .best-seller-item img {
+
     width: 100%;
+
     height: auto;
 
     display: block;
@@ -299,9 +422,12 @@ background:
     transition:
         transform 0.5s ease,
         filter 0.5s ease;
+
 }
 
+
 .best-seller-item:hover img {
+
     transform:
         translateY(-5px)
         scale(1.015);
@@ -310,31 +436,41 @@ background:
         drop-shadow(
             0 16px 20px rgba(80, 70, 60, 0.13)
         );
+
 }
 
 
-/* Dots */
+/* CAROUSEL DOTS */
 
 .carousel-dots {
+
     position: relative;
+
     z-index: 2;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     gap: 8px;
 
     margin-top: 45px;
+
 }
 
+
 .dot {
+
     display: block;
 
     width: 18px;
+
     height: 3px;
 
     border: none;
+
     border-radius: 10px;
 
     background: #D9D9D9;
@@ -342,185 +478,244 @@ background:
     transition:
         width 0.3s ease,
         background-color 0.3s ease;
+
 }
+
 
 .dot.active {
+
     width: 28px;
+
     background: #8D8173;
+
 }
 
 
-/* =========================================================
-   COLLECTION
-========================================================= */
+/* COLLECTION */
 
 .collection {
+
     position: relative;
+
     width: 100%;
 
     padding-top: 135px;
+
     padding-bottom: 135px;
 
     overflow: hidden;
 
     background-color: #FFFFFF;
+
 }
 
 
-/* Soft mist */
+/* COLLECTION ATMOSPHERE */
 
 .collection::before {
+
     content: "";
 
     position: absolute;
+
     left: -180px;
+
     top: 260px;
 
     width: 420px;
+
     height: 220px;
 
     background: rgba(244, 237, 229, 0.8);
 
     border-radius: 50%;
+
     filter: blur(55px);
 
     pointer-events: none;
+
 }
 
+
 .collection::after {
+
     content: "";
 
     position: absolute;
+
     right: -180px;
+
     bottom: -90px;
 
     width: 75%;
+
     height: 170px;
 
     background: rgba(246, 240, 233, 0.85);
 
     border-radius: 50%;
+
     filter: blur(55px);
 
     pointer-events: none;
+
 }
 
 
-/* Title */
+/* COLLECTION TITLE */
 
 .collection-title {
+
     position: relative;
+
     z-index: 2;
 
     text-align: center;
+
 }
 
 
-/* Layout */
+/* COLLECTION LAYOUT */
 
 .collection-layout {
+
     position: relative;
+
     width: 100%;
 
     margin-top: 65px;
 
     display: grid;
+
     grid-template-columns: 34% 66%;
 
     align-items: center;
 
     z-index: 2;
+
 }
 
 
-/* Introduction */
+/* COLLECTION INTRODUCTION */
 
 .collection-introduction {
+
     padding: 25px 12% 0 7%;
+
 }
 
+
 .collection-introduction h3 {
+
     margin-bottom: 24px;
 
     font-family: "Cormorant Garamond", Georgia, serif;
+
     font-size: clamp(34px, 3vw, 46px);
+
     font-weight: 400;
+
     letter-spacing: 4px;
+
     line-height: 1.1;
 
     color: #222222;
+
 }
 
+
 .collection-introduction p {
+
     max-width: 390px;
 
     margin-bottom: 38px;
 
     font-family: "Montserrat", Arial, sans-serif;
+
     font-size: 13px;
+
     line-height: 1.8;
+
     letter-spacing: 1.5px;
+
     font-weight: 300;
 
     color: #555555;
+
 }
 
 
-/* Explore button */
+/* COLLECTION BUTTON */
 
 .discover-button {
-    position: relative;
 
-    display: flex;
+    display: inline-flex;
+
     justify-content: center;
+
     align-items: center;
 
-    width: 175px;
-    height: 48px;
+    width: 165px;
 
-    border: 1px solid #777777;
+    height: 46px;
 
-    background: rgba(255, 255, 255, 0.7);
+    border: none;
 
-    color: #222222;
+    background: #8B6335;
+
+    color: #FFFFFF;
 
     font-family: "Montserrat", Arial, sans-serif;
-    font-size: 11px;
+
+    font-size: 10px;
+
     font-weight: 400;
+
     letter-spacing: 2px;
 
     text-decoration: none;
 
     transition:
         background-color 0.3s ease,
-        color 0.3s ease,
         transform 0.3s ease;
+
 }
+
 
 .discover-button:hover {
-    background-color: #8B6335;
-    color: #FFFFFF;
 
-    transform: translateY(-3px);
+    background-color: #F5F0EA;
+
+    color: #222222;
+
+    transform: translateY(-2px);
+
 }
 
 
-/* Collection carousel */
+/* COLLECTION CAROUSEL */
 
 .collection-carousel {
+
     position: relative;
 
     width: 100%;
+
     min-width: 0;
 
     overflow: hidden;
+
 }
 
+
 .collection-viewport {
+
     width: 100%;
+
     min-width: 0;
 
     overflow-x: auto;
+
     overflow-y: hidden;
 
     scrollbar-width: none;
@@ -530,27 +725,39 @@ background:
     scroll-behavior: smooth;
 
     cursor: grab;
+
 }
+
 
 .collection-viewport:active {
+
     cursor: grabbing;
+
 }
+
 
 .collection-viewport::-webkit-scrollbar {
+
     display: none;
+
 }
 
+
 .collection-track {
+
     display: flex;
 
     transition: none;
+
 }
 
 
-/* Collection cards */
+/* COLLECTION CARDS */
 
 .collection-card {
+
     flex: 0 0 58%;
+
     width: 58%;
 
     margin-right: 30px;
@@ -558,16 +765,23 @@ background:
     min-width: 0;
 
     transition: transform 0.5s ease;
+
 }
+
 
 .collection-card:hover {
+
     transform: translateY(-7px);
+
 }
 
+
 .collection-card img {
+
     display: block;
 
     width: 100%;
+
     height: auto;
 
     aspect-ratio: 1.22 / 1;
@@ -577,78 +791,101 @@ background:
     transition:
         transform 0.6s ease,
         filter 0.6s ease;
+
 }
 
+
 .collection-card:hover img {
+
     transform: scale(1.015);
 
     filter:
         drop-shadow(
             0 14px 20px rgba(80, 70, 60, 0.12)
         );
+
 }
 
+
 .collection-card h4 {
+
     margin-top: 22px;
+
     margin-bottom: 12px;
 
     font-family: "Montserrat", Arial, sans-serif;
+
     font-size: 13px;
+
     font-weight: 400;
+
     letter-spacing: 3px;
 
     color: #222222;
+
 }
 
+
 .collection-card p {
+
     width: 100%;
+
     max-width: 430px;
 
     margin: 0;
 
     font-family: "Montserrat", Arial, sans-serif;
+
     font-size: 11px;
+
     font-weight: 300;
+
     line-height: 1.7;
+
     letter-spacing: 1.2px;
 
     color: #777777;
+
 }
 
 
-/* =========================================================
-   MORE THAN A FRAGRANCE
-========================================================= */
+/* MORE THAN A FRAGRANCE */
 
 .more-than-fragrance {
+
     position: relative;
+
     width: 100%;
 
     padding: 120px 5% 145px;
 
     overflow: hidden;
 
-background:
-    linear-gradient(
-        180deg,
-        #F7F3EE 0%,
-        #FAFBFA 48%,
-        #FFFFFF 100%
-    );
+    background:
+        linear-gradient(
+            180deg,
+            #F7F3EE 0%,
+            #FAFBFA 48%,
+            #FFFFFF 100%
+        );
+
 }
 
 
-/* Soft atmosphere */
+/* FRAGRANCE ATMOSPHERE */
 
 .more-than-fragrance::before {
+
     content: "";
 
     position: absolute;
 
     left: -180px;
+
     top: 180px;
 
     width: 430px;
+
     height: 210px;
 
     border-radius: 50%;
@@ -658,17 +895,22 @@ background:
     filter: blur(55px);
 
     pointer-events: none;
+
 }
 
+
 .more-than-fragrance::after {
+
     content: "";
 
     position: absolute;
 
     right: -180px;
+
     bottom: -70px;
 
     width: 80%;
+
     height: 150px;
 
     border-radius: 50%;
@@ -678,53 +920,72 @@ background:
     filter: blur(55px);
 
     pointer-events: none;
+
 }
 
 
-/* Title */
+/* FRAGRANCE TITLE */
 
 .fragrance-title {
+
     position: relative;
+
     z-index: 2;
 
     margin-bottom: 75px;
 
     text-align: center;
+
 }
 
+
 .fragrance-title h2 {
+
     margin: 0;
 
     font-family: "Cormorant Garamond", Georgia, serif;
+
     font-size: clamp(40px, 4vw, 54px);
+
     font-weight: 400;
+
     letter-spacing: 5px;
 
     color: #222222;
+
 }
 
 
-/* Features */
+/* FEATURES */
 
 .features-container {
+
     position: relative;
+
     z-index: 2;
 
     width: 100%;
 
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
 
     gap: 5%;
 
     margin-top: 0;
+
 }
+
 
 .features-left {
+
     display: contents;
+
 }
 
+
 .feature {
+
     text-align: center;
 
     padding: 30px 25px 38px;
@@ -739,25 +1000,34 @@ background:
         transform 0.45s ease,
         background-color 0.45s ease,
         box-shadow 0.45s ease;
+
 }
 
+
 .feature:hover {
+
     transform: translateY(-8px);
 
     background: rgba(255, 255, 255, 0.75);
 
     box-shadow:
         0 18px 35px rgba(90, 90, 90, 0.08);
+
 }
 
+
 .feature-image {
+
     width: 180px;
+
     height: 180px;
 
     margin: 0 auto 28px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 50%;
@@ -771,441 +1041,671 @@ background:
         );
 
     transition: transform 0.5s ease;
+
 }
+
 
 .feature:hover .feature-image {
+
     transform: translateY(-5px);
+
 }
 
+
 .feature-image img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: contain;
+
 }
 
+
 .feature h3 {
+
     margin: 0 0 18px;
 
     font-family: "Montserrat", Arial, sans-serif;
+
     font-size: 12px;
+
     font-weight: 400;
+
     letter-spacing: 3px;
 
     color: #222222;
+
 }
 
+
 .feature p {
+
     max-width: 310px;
 
     margin: 0 auto;
 
     font-family: "Montserrat", Arial, sans-serif;
+
     font-size: 12px;
+
     line-height: 1.75;
+
     letter-spacing: 1.2px;
+
     font-weight: 300;
 
     color: #666666;
+
 }
 
 
-/* =========================================================
-   GENERAL INTERACTION
-========================================================= */
+/* GENERAL INTERACTION */
 
 .collection-introduction,
 .collection-card,
 .feature {
+
     transition:
         transform 0.5s ease,
         opacity 0.5s ease;
+
 }
 
 
-/* =========================================================
-   TABLET
-   901px DOWN TO 600px
-========================================================= */
+/* TABLET - 900px */
 
 @media (max-width: 900px) {
 
-    /* -----------------------------------------------------
-       HERO
-    ----------------------------------------------------- */
+
+    /* HERO */
 
     .hero {
+
         height: auto;
+
         min-height: 380px;
 
         aspect-ratio: 16 / 7;
+
     }
 
+
     .hero-image {
+
         width: 100%;
+
         height: 100%;
 
         object-fit: cover;
+
         object-position: center center;
+
     }
+
 
     .hero-scroll {
+
         gap: 9px;
+
     }
+
 
     .hero-scroll span {
+
         height: 30px;
+
     }
+
 
     .hero-scroll p {
+
         font-size: 7px;
+
         letter-spacing: 2.5px;
+
     }
 
 
-    /* -----------------------------------------------------
-       GENERAL TITLES
-    ----------------------------------------------------- */
+    /* GENERAL TITLES */
 
     .section-title h2 {
+
         font-size: clamp(34px, 5vw, 44px);
+
         letter-spacing: 5px;
+
     }
+
 
     .section-eyebrow {
+
         font-size: 9px;
+
         letter-spacing: 3px;
+
     }
+
 
     .section-subtitle {
+
         font-size: 11px;
+
         letter-spacing: 1.2px;
+
     }
 
 
-    /* -----------------------------------------------------
-       BEST SELLERS
-    ----------------------------------------------------- */
+/* BEST SELLERS */
 
-    .best-seller {
-        padding-top: 65px;
-        padding-bottom: 65px;
-    }
+.best-seller {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
 
-    .best-seller-title h2 {
-        font-size: clamp(38px, 5vw, 50px);
-    }
+.best-seller-title h2 {
+    font-size: clamp(38px, 5vw, 50px);
+}
 
-    .best-seller-carousel {
-        margin-top: 50px;
-    }
-
-    .best-seller-item {
-        flex: 0 0 50%;
-        width: 50%;
-
-        padding: 0 7px;
-    }
-
-    .best-seller-item img {
-        width: 100%;
-        height: auto;
-
-        object-fit: contain;
-    }
-
-    .carousel-dots {
-        margin-top: 40px;
-    }
+.best-seller-carousel {
+    width: 100%;
+    margin-top: 50px;
+    overflow: hidden;
+}
 
 
-    /* -----------------------------------------------------
-       COLLECTION
-    ----------------------------------------------------- */
+/* BEST SELLER VIEWPORT */
+
+.best-seller-viewport {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.best-seller-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* BEST SELLER TRACK */
+
+.best-seller-track {
+    display: flex;
+    width: max-content;
+}
+
+
+/* BEST SELLER PRODUCTS */
+
+.best-seller-item {
+    flex: 0 0 50vw;
+    width: 50vw;
+    padding: 0 7px;
+    min-width: 0;
+}
+
+.best-seller-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* CAROUSEL DOTS */
+
+.carousel-dots {
+    margin-top: 40px;
+}
+
+
+    /* COLLECTION */
 
     .collection {
+
         padding-top: 100px;
+
         padding-bottom: 100px;
+
     }
 
+
     .collection-layout {
+
         margin-top: 55px;
 
         grid-template-columns: 1fr;
 
         align-items: start;
+
     }
 
+
     .collection-introduction {
+
         padding: 35px 7% 50px;
 
         text-align: center;
+
     }
+
 
     .collection-introduction h3 {
+
         font-size: clamp(32px, 5vw, 42px);
+
         letter-spacing: 4px;
+
     }
 
+
     .collection-introduction p {
+
         max-width: 600px;
 
         margin-left: auto;
+
         margin-right: auto;
+
         margin-bottom: 32px;
 
         font-size: 12px;
+
         line-height: 1.8;
+
     }
 
+
     .discover-button {
+
         margin: 0 auto;
 
         width: 175px;
+
         height: 48px;
 
         font-size: 11px;
-    }
 
-    .collection-carousel {
-        width: 100%;
-    }
-
-    .collection-card {
-        flex: 0 0 65%;
-        width: 65%;
-
-        margin-right: 25px;
-    }
-
-    .collection-card img {
-        width: 100%;
-        height: auto;
-
-        aspect-ratio: 1.22 / 1;
-
-        object-fit: cover;
-    }
-
-    .collection-card p {
-        max-width: 100%;
     }
 
 
-    /* -----------------------------------------------------
-       MORE THAN A FRAGRANCE
-    ----------------------------------------------------- */
+ /* COLLECTION CAROUSEL */
 
-    .more-than-fragrance {
-        padding: 75px 7% 100px;
-    }
+.collection-carousel {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
 
-    .fragrance-title {
-        margin-bottom: 60px;
-    }
+.collection-viewport {
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
 
-    .fragrance-title h2 {
-        font-size: clamp(38px, 5vw, 48px);
-    }
+.collection-viewport::-webkit-scrollbar {
+    display: none;
+}
 
-    .features-container {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-    .feature {
-        padding: 30px 30px 38px;
-    }
-
-    .feature-image {
-        width: 180px;
-        height: 180px;
-    }
-
-    .feature p {
-        max-width: 500px;
-    }
+.collection-track {
+    display: flex;
+    width: max-content;
 }
 
 
-/* =========================================================
-   MOBILE
-   600px DOWN TO 381px
-========================================================= */
+/* COLLECTION CARDS */
+
+.collection-card {
+    flex: 0 0 62vw;
+    width: 62vw;
+    margin-right: 25px;
+    min-width: 0;
+}
+
+.collection-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.22 / 1;
+    object-fit: cover;
+}
+
+.collection-card h4 {
+    margin-top: 22px;
+    margin-bottom: 12px;
+}
+
+.collection-card p {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+    /* MORE THAN A FRAGRANCE */
+
+    .more-than-fragrance {
+
+        padding: 75px 7% 100px;
+
+    }
+
+
+    .fragrance-title {
+
+        margin-bottom: 60px;
+
+    }
+
+
+    .fragrance-title h2 {
+
+        font-size: clamp(38px, 5vw, 48px);
+
+    }
+
+
+    .features-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .feature {
+
+        padding: 30px 30px 38px;
+
+    }
+
+
+    .feature-image {
+
+        width: 180px;
+
+        height: 180px;
+
+    }
+
+
+    .feature p {
+
+        max-width: 500px;
+
+    }
+
+}
+
+
+/* MOBILE - 600px */
 
 @media (max-width: 600px) {
 
-    /* -----------------------------------------------------
-       HERO
-    ----------------------------------------------------- */
+
+    /* HERO */
 
     .hero {
+
         width: 100%;
+
         height: auto;
+
         min-height: 0;
 
         aspect-ratio: auto;
+
     }
 
+
     .hero-image {
+
         width: 100%;
+
         height: auto;
 
         object-fit: contain;
+
         object-position: center;
+
     }
+
 
     .hero-scroll {
+
         gap: 8px;
+
     }
+
 
     .hero-scroll span {
+
         height: 27px;
+
     }
+
 
     .hero-scroll p {
+
         font-size: 6.5px;
+
         letter-spacing: 2px;
+
     }
 
 
-    /* -----------------------------------------------------
-       GENERAL TITLES
-    ----------------------------------------------------- */
+    /* GENERAL TITLES */
 
     .section-title h2 {
+
         font-size: 34px;
+
         letter-spacing: 4px;
+
     }
 
+
     .section-eyebrow {
+
         margin-bottom: 10px;
 
         font-size: 8px;
+
         letter-spacing: 2.5px;
+
     }
 
+
     .section-subtitle {
+
         margin-top: 10px;
 
         font-size: 10px;
+
         line-height: 1.7;
+
         letter-spacing: 1px;
 
         padding: 0 20px;
+
     }
+
 
     .title-line {
+
         width: 45px;
+
         margin-top: 12px;
+
     }
 
 
-    /* -----------------------------------------------------
-       BEST SELLERS
-    ----------------------------------------------------- */
+    /* BEST SELLERS */
 
     .best-seller {
+
         padding-top: 55px;
+
         padding-bottom: 70px;
+
     }
+
 
     .best-seller-title h2 {
+
         font-size: 38px;
+
         letter-spacing: 4px;
+
     }
+
 
     .best-seller-carousel {
+
         margin-top: 40px;
+
     }
 
+
     .best-seller-item {
+
         flex: 0 0 85vw;
+
         width: 85vw;
 
         padding: 0 6px;
+
     }
 
+
     .best-seller-item img {
+
         width: 100%;
+
         height: auto;
 
         object-fit: contain;
+
     }
+
 
     .carousel-dots {
+
         margin-top: 30px;
+
         gap: 6px;
+
     }
+
 
     .dot {
+
         width: 11px;
+
         height: 3px;
+
     }
+
 
     .dot.active {
+
         width: 20px;
+
     }
 
 
-    /* -----------------------------------------------------
-       COLLECTION
-    ----------------------------------------------------- */
+    /* COLLECTION */
 
     .collection {
+
         padding-top: 90px;
+
         padding-bottom: 90px;
+
     }
 
+
     .collection-layout {
+
         margin-top: 45px;
 
         grid-template-columns: 1fr;
+
     }
 
+
     .collection-introduction {
+
         padding: 0 20px 45px;
 
         text-align: center;
+
     }
 
+
     .collection-introduction h3 {
+
         margin-bottom: 20px;
 
         font-size: 34px;
+
         letter-spacing: 4px;
+
     }
 
+
     .collection-introduction p {
+
         max-width: 500px;
 
         margin: 0 auto 30px;
 
         font-size: 12px;
+
         line-height: 1.7;
+
         letter-spacing: 1.2px;
+
     }
 
+
     .discover-button {
+
         width: 160px;
+
         height: 46px;
 
         margin: 0 auto;
 
         font-size: 10px;
+
         letter-spacing: 1.8px;
+
     }
 
+
     .collection-card {
+
         flex: 0 0 88vw;
+
         width: 88vw;
 
         margin-right: 18px;
+
     }
 
+
     .collection-card img {
+
         width: 100%;
+
         height: auto;
 
         aspect-ratio: 1.22 / 1;
@@ -1213,175 +1713,260 @@ background:
         object-fit: cover;
 
         margin-bottom: 18px;
+
     }
 
+
     .collection-card h4 {
+
         margin-top: 0;
+
         margin-bottom: 10px;
 
         font-size: 16px;
+
         letter-spacing: 2.5px;
+
     }
+
 
     .collection-card p {
+
         font-size: 11px;
+
         line-height: 1.7;
+
         letter-spacing: 1px;
+
     }
 
 
-    /* -----------------------------------------------------
-       MORE THAN A FRAGRANCE
-    ----------------------------------------------------- */
+    /* MORE THAN A FRAGRANCE */
 
     .more-than-fragrance {
+
         padding: 85px 20px 90px;
+
     }
+
 
     .fragrance-title {
+
         margin-bottom: 50px;
+
     }
+
 
     .fragrance-title h2 {
+
         font-size: 36px;
+
         letter-spacing: 3px;
+
     }
 
+
     .features-container {
+
         grid-template-columns: 1fr;
 
         gap: 30px;
+
     }
+
 
     .feature {
+
         padding: 25px 20px 32px;
+
     }
 
+
     .feature-image {
+
         width: 155px;
+
         height: 155px;
 
         margin-bottom: 22px;
+
     }
 
+
     .feature h3 {
+
         margin-bottom: 14px;
 
         font-size: 11px;
+
         letter-spacing: 2.5px;
+
     }
 
+
     .feature p {
+
         max-width: 100%;
 
         font-size: 11px;
+
         line-height: 1.7;
+
         letter-spacing: 1px;
+
     }
+
 }
 
 
-/* =========================================================
-   VERY SMALL PHONES
-   380px AND BELOW
-========================================================= */
+/* VERY SMALL PHONES - 380px */
 
 @media (max-width: 380px) {
 
-    /* -----------------------------------------------------
-       HERO
-    ----------------------------------------------------- */
+
+    /* HERO */
 
     .hero-scroll p {
+
         font-size: 6px;
+
         letter-spacing: 1.8px;
+
     }
+
 
     .hero-scroll span {
+
         height: 24px;
+
     }
 
 
-    /* -----------------------------------------------------
-       BEST SELLERS
-    ----------------------------------------------------- */
+    /* BEST SELLERS */
 
     .best-seller {
+
         padding-top: 50px;
+
         padding-bottom: 60px;
+
     }
+
 
     .best-seller-title h2 {
+
         font-size: 34px;
+
         letter-spacing: 3px;
+
     }
+
 
     .best-seller-item {
+
         flex: 0 0 90vw;
+
         width: 90vw;
+
     }
 
 
-    /* -----------------------------------------------------
-       COLLECTION
-    ----------------------------------------------------- */
+    /* COLLECTION */
 
     .collection {
+
         padding-top: 70px;
+
         padding-bottom: 70px;
+
     }
+
 
     .collection-introduction {
+
         padding-left: 15px;
+
         padding-right: 15px;
+
     }
+
 
     .collection-introduction h3 {
+
         font-size: 30px;
+
         letter-spacing: 3px;
+
     }
+
 
     .collection-introduction p {
+
         font-size: 11px;
+
         line-height: 1.7;
+
     }
 
+
     .collection-card {
+
         flex: 0 0 90vw;
+
         width: 90vw;
 
         margin-right: 15px;
+
     }
+
 
     .collection-card h4 {
+
         font-size: 15px;
+
     }
+
 
     .collection-card p {
+
         font-size: 10.5px;
+
     }
 
 
-    /* -----------------------------------------------------
-       MORE THAN A FRAGRANCE
-    ----------------------------------------------------- */
+    /* MORE THAN A FRAGRANCE */
 
     .more-than-fragrance {
+
         padding: 70px 15px 75px;
+
     }
+
 
     .fragrance-title h2 {
+
         font-size: 32px;
+
         letter-spacing: 2.5px;
+
     }
+
 
     .feature {
+
         padding-left: 15px;
+
         padding-right: 15px;
+
     }
 
+
     .feature-image {
+
         width: 140px;
+
         height: 140px;
+
     }
+
 }

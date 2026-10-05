@@ -1,12 +1,9 @@
-/* =========================================================
-   FLORENCE PERFUME PH
-   COLLECTION FILTER + SEARCH
-========================================================= */
+// COLLECTION FILTER + SEARCH
 
 
-/* =========================================================
-   ELEMENTS
-========================================================= */
+
+// ELEMENTS
+// Gets the category buttons and product cards.
 
 const categoryButtons =
     document.querySelectorAll(".category");
@@ -15,9 +12,13 @@ const productCards =
     document.querySelectorAll(".product-card");
 
 
-/* =========================================================
-   FILTER BY CATEGORY
-========================================================= */
+
+
+
+
+
+// FILTER BY CATEGORY
+// Shows products that belong to the selected category.
 
 function filterProducts(selectedCategory) {
 
@@ -36,9 +37,13 @@ function filterProducts(selectedCategory) {
 }
 
 
-/* =========================================================
-   SEARCH PRODUCTS
-========================================================= */
+
+
+
+
+
+// SEARCH PRODUCTS
+// Finds products by name or category.
 
 function searchProducts(searchTerm) {
 
@@ -50,7 +55,8 @@ function searchProducts(searchTerm) {
 
     productCards.forEach((card) => {
 
-        /* Get product name from image alt text */
+
+        // Get product name from image alt text.
 
         const image =
             card.querySelector("img");
@@ -65,22 +71,15 @@ function searchProducts(searchTerm) {
             card.dataset.category.toLowerCase();
 
 
-        /*
-            Check product name.
-            Example:
-            "cloud" → A Cloud
-            "wood" → Wood Sages / Santal Woody
-        */
+        // Check if the product name contains the search term.
+        // Example: "cloud" can find "A Cloud".
 
         const matchesProduct =
             productName.includes(term);
 
 
-        /*
-            Check category.
-            Use exact matching so
-            "men" does not match "women".
-        */
+        // Check if the search term exactly matches a category.
+        // This prevents "men" from matching "women".
 
         const matchesCategory =
             term === category;
@@ -111,9 +110,13 @@ function searchProducts(searchTerm) {
 }
 
 
-/* =========================================================
-   CATEGORY BUTTONS
-========================================================= */
+
+
+
+
+
+// CATEGORY BUTTONS
+// Changes the displayed products when a category is clicked.
 
 categoryButtons.forEach((button) => {
 
@@ -125,7 +128,7 @@ categoryButtons.forEach((button) => {
                 button.dataset.category;
 
 
-            /* Update active button */
+            // Update the active category button.
 
             categoryButtons.forEach(
                 (item) => {
@@ -137,7 +140,7 @@ categoryButtons.forEach((button) => {
             button.classList.add("active");
 
 
-            /* Remove search from URL */
+            // Remove the search term from the URL.
 
             const url =
                 new URL(window.location.href);
@@ -151,7 +154,7 @@ categoryButtons.forEach((button) => {
             );
 
 
-            /* Remove no-results message */
+            // Remove the no-results message.
 
             const oldMessage =
                 document.querySelector(
@@ -163,7 +166,7 @@ categoryButtons.forEach((button) => {
             }
 
 
-            /* Show selected category */
+            // Show products from the selected category.
 
             filterProducts(
                 selectedCategory
@@ -175,9 +178,13 @@ categoryButtons.forEach((button) => {
 });
 
 
-/* =========================================================
-   READ SEARCH FROM URL
-========================================================= */
+
+
+
+
+
+// READ SEARCH FROM URL
+// Gets the search term sent from the navigation search box.
 
 const urlParams =
     new URLSearchParams(
@@ -190,10 +197,9 @@ const searchTerm =
 
 if (searchTerm) {
 
-    /*
-        Remove active state because
-        we are showing search results.
-    */
+
+    // Remove the active category
+    // because search results are being displayed.
 
     categoryButtons.forEach(
         (button) => {
@@ -206,9 +212,13 @@ if (searchTerm) {
         searchProducts(searchTerm);
 
 
-    /* =====================================================
-       NO RESULTS
-    ===================================================== */
+
+
+
+
+
+    // NO RESULTS
+    // Shows a message when no product matches the search.
 
     if (foundProducts === 0) {
 
@@ -239,11 +249,9 @@ if (searchTerm) {
 
 } else {
 
-    /*
-        Default category:
-        Show Unisex when Collection
-        first loads.
-    */
+
+    // DEFAULT CATEGORY
+    // Shows Unisex products when the Collection page first loads.
 
     filterProducts("unisex");
 
