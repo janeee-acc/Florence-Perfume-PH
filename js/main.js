@@ -725,3 +725,35 @@ if (
     );
 
 }
+
+// SPLASH SCREEN WITH LOADING INDICATOR
+window.addEventListener("load", function () {
+
+    const splash = document.getElementById("splash-screen");
+    const progress = document.querySelector(".loading-progress");
+
+    if (!splash || !progress) return;
+
+    let width = 0;
+
+    const loading = setInterval(function () {
+
+        width += 2;
+        progress.style.width = width + "%";
+
+        if (width >= 100) {
+
+            clearInterval(loading);
+
+            // Hide loading screen after reaching 100%
+            splash.classList.add("hide");
+
+            // Remove loading screen after fade-out
+            setTimeout(function () {
+                splash.remove();
+            }, 500);
+        }
+
+    }, 40);
+
+});
