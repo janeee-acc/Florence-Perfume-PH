@@ -726,13 +726,19 @@ if (
 
 }
 
-// SPLASH SCREEN WITH LOADING INDICATOR
+// SPLASH SCREEN - SHOW ONLY ON FIRST VISIT
 window.addEventListener("load", function () {
 
     const splash = document.getElementById("splash-screen");
     const progress = document.querySelector(".loading-progress");
 
     if (!splash || !progress) return;
+
+    // Check if splash screen was already shown
+    if (sessionStorage.getItem("splashShown")) {
+        splash.remove();
+        return;
+    }
 
     let width = 0;
 
@@ -745,10 +751,13 @@ window.addEventListener("load", function () {
 
             clearInterval(loading);
 
-            // Hide loading screen after reaching 100%
+            // Remember that splash screen was shown
+            sessionStorage.setItem("splashShown", "true");
+
+            // Fade out splash screen
             splash.classList.add("hide");
 
-            // Remove loading screen after fade-out
+            // Remove splash screen
             setTimeout(function () {
                 splash.remove();
             }, 500);
